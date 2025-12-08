@@ -18,63 +18,70 @@
     <nav class="fixed w-full z-50 bg-black shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo and Name -->
-                <div class="flex items-center flex-shrink-0">
-                    <img src="logo.jpg" alt="BVTC Logo" class="w-10 h-10 rounded-full object-cover">
-                    <span class="ml-2 font-bold text-white text-sm sm:text-base md:text-lg lg:text-xl leading-tight">
-                        <span class="block md:hidden">Bridgeway Visa Travel Corporation</span>
-                        <span class="hidden md:block">Bridgeway Visa Travel Corporation</span>
+
+                <!-- Logo + Name -->
+                <div class="flex items-center gap-3 min-w-0">
+                    <img src="logo.jpg" alt="BVTC Logo" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+
+                    <!-- Responsive Company Name -->
+                    <span class="font-bold text-white leading-tight truncate 
+                    text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl">
+                        Bridgeway Visa Travel Corporation
                     </span>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-4">
-                    <a href="#office"
-                        class="text-white hover:text-red-600 px-3 py-2 text-sm lg:text-base font-medium transition duration-300">Office</a>
-                    <a href="#services"
-                        class="text-white hover:text-red-600 px-3 py-2 text-sm lg:text-base font-medium transition duration-300">Services</a>
-                    <a href="#about"
-                        class="text-white hover:text-red-600 px-3 py-2 text-sm lg:text-base font-medium transition duration-300">About
-                        Us</a>
-                    <a href="#partners"
-                        class="text-white hover:text-red-600 px-3 py-2 text-sm lg:text-base font-medium transition duration-300">Partners</a>
-                    <a href="#contact"
-                        class="text-white hover:text-red-600 px-3 py-2 text-sm lg:text-base font-medium transition duration-300">Contact</a>
+                    <a href="#office" class="nav-link">Office</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#consultants" class="nav-link">Visa Consultants</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#partners" class="nav-link">Partners</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
+
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pt-3 pb-4 space-y-1">
-            <a href="#office"
-                class="block text-white hover:text-red-600 px-3 py-2 rounded-md text-base font-medium">Office</a>
-            <a href="#services"
-                class="block text-white hover:text-red-600 px-3 py-2 rounded-md text-base font-medium">Services</a>
-            <a href="#about"
-                class="block text-white hover:text-red-600 px-3 py-2 rounded-md text-base font-medium">About Us</a>
-            <a href="#partners"
-                class="block text-white hover:text-red-600 px-3 py-2 rounded-md text-base font-medium">Partners</a>
-            <a href="#contact"
-                class="block text-white hover:text-red-600 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pt-3 pb-4 space-y-2">
+            <a href="#office" class="mobile-link">Office</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#consultants" class="mobile-link text-red-400 font-semibold">Visa Consultants</a>
+            <a href="#about" class="mobile-link">About Us</a>
+            <a href="#partners" class="mobile-link">Partners</a>
+            <a href="#contact" class="mobile-link">Contact</a>
         </div>
     </nav>
 
+    <!-- Reusable Classes -->
+    <style>
+        .nav-link {
+            @apply text-white hover:text-red-600 px-3 py-2 text-sm lg:text-base font-medium transition duration-300;
+        }
 
+        .mobile-link {
+            @apply block text-white hover:text-red-600 px-3 py-2 rounded-md text-base font-medium;
+        }
+    </style>
 
     <!-- Office Section -->
     <section id="office" class="pt-24 pb-32 bg-[#000000] animate-fade-in">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white text-center mb-12">Our Office</h2>
+            <!-- <h2 class="text-3xl font-bold text-white text-center mb-12">Our Office</h2> -->
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+                Our Office
+            </h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
 
                 <!-- Office Collage -->
@@ -121,7 +128,7 @@
         <!-- Services content -->
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
-                SERVICES WE OFFER
+                Services We Offer
             </h2>
 
             <div id="services-accordion" class="space-y-4">
@@ -268,7 +275,10 @@
 
             <!-- Featured Programs Section -->
             <div class="mt-16 relative">
-                <h3 class="text-2xl font-bold text-red-800 mb-8 text-center">Featured Programs</h3>
+                <!-- <h3 class="text-2xl font-bold text-red-800 mb-8 text-center">Featured Programs</h3> -->
+                <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+                    Featured Programs
+                </h2>
 
                 <!-- Scroll Buttons -->
                 <button id="scrollLeft"
@@ -448,11 +458,60 @@
         </div>
     </section>
 
+    <!-- Visa Consultants Section -->
+    <section id="consultants" class="bg-black py-20">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-bold text-red-600 mb-6">
+                Visa Consultants
+            </h2>
+
+            <!-- Section Description -->
+            <p class="text-gray-300 text-lg mb-10">
+                Our expert visa consultants are here to guide you through every step of your application process.
+            </p>
+
+            <!-- Video Player (Smaller Container) -->
+            <div class="mx-auto max-w-sm"> <!-- Reduced from max-w-3xl to max-w-xl -->
+                <video id="consultantVideo" controls class="w-full rounded-lg shadow-lg border-2 border-red-600">
+                    <source src="visa-consultation-video/consultaion.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const video = document.getElementById('consultantVideo');
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();  // play when section is visible
+                    } else {
+                        video.pause(); // pause when out of view
+                    }
+                });
+            },
+            { threshold: 0.5 } // 50% of video must be visible
+        );
+
+        observer.observe(video);
+    </script>
+
+
+
     <!-- About Section -->
     <section id="about" class="py-20 bg-white-100">
         <!-- About content -->
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title">About Us</h2>
+            <!-- <h2 class="section-title">About Us</h2> -->
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+                About Us
+            </h2>
+
             <div class="flex flex-col md:flex-row items-start gap-12">
                 <!-- Left: Image -->
                 <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
@@ -618,7 +677,10 @@
     <section id="partners" class="py-20">
         <!-- Partners content -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-3xl font-bold text-red-800 text-center mb-6">Our Partners</h2>
+            <!-- <h2 class="text-3xl font-bold text-red-800 text-center mb-6">Our Partners</h2> -->
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+                Our Partners
+            </h2>
             <div class="text-center mb-12">
                 <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                     We are proud to collaborate with leading organizations and clients worldwide.
@@ -821,7 +883,7 @@
                     <div>
                         <div
                             class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/TRENT.png" alt="Trent Global College Logo"
+                            <img src="ourPartners/Trent.png" alt="Trent Global College Logo"
                                 class="object-contain w-full h-full" />
                         </div>
                         <h4 class="text-lg font-bold text-white mb-1">Trent Global College</h4>
@@ -920,15 +982,12 @@
 
                             <h2 class="text-3xl font-bold text-red-800 mb-6">Message Us</h2>
 
-                            <p class="text-white mb-4">
-                                For inquiries, feel free to contact us directly through Messenger or fill out our Google
-                                Form.
+                            <p class="text-white mb-6">
+                                For inquiries or faster assistance, you may contact us through Messenger or fill out our
+                                Free Call Assessment Form. Our visa consultant will reach out within 24 hours to help
+                                guide you toward your goal of going abroad.
                             </p>
 
-                            <p class="text-white mb-6">
-                                For faster assistance, fill out our Free Call Assessment Form. Our visa consultant will
-                                contact you within 24 hours to guide you toward your dream of going abroad.
-                            </p>
 
                             <!-- Button Wrapper (makes widths match) -->
                             <div class="w-full max-w-[320px] flex flex-col items-center">
@@ -1101,8 +1160,8 @@
                     <a href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
                         target="_blank" class="text-white hover:text-black" aria-label="Facebook"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.tiktok.com/@bridgewayvisa_"
-                        target="_blank" class="text-white hover:text-red-600" aria-label="TikTok">
+                    <a href="https://www.tiktok.com/@bridgewayvisa_" target="_blank"
+                        class="text-white hover:text-red-600" aria-label="TikTok">
                         <i class="fab fa-tiktok"
                             style="font-size:1.5rem;width:1.5rem;height:1.5rem;display:inline-block;"></i>
                     </a>
@@ -1125,7 +1184,4 @@
     <script src="js/main.js"></script>
 </body>
 
-
 </html>
-
-
