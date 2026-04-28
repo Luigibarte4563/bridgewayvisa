@@ -34,8 +34,9 @@
                 <div class="hidden md:flex space-x-4">
                     <a href="#office" class="nav-link">Office</a>
                     <a href="#services" class="nav-link">Services</a>
-                    <a href="#consultants" class="nav-link">Visa Consultants</a>
-                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#featured-programs" class="nav-link">Featured</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#our-foundation" class="nav-link">Foundation</a>
                     <a href="#partners" class="nav-link">Partners</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
@@ -57,8 +58,9 @@
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pt-3 pb-4 flex flex-col space-y-2">
             <a href="#office" class="mobile-link block">Office</a>
             <a href="#services" class="mobile-link block">Services</a>
-            <a href="#consultants" class="mobile-link block">Visa Consultants</a>
-            <a href="#about" class="mobile-link block">About Us</a>
+            <a href="#featured-programs" class="nav-link">Featured</a>
+            <a href="#about" class="mobile-link block">About</a>
+            <a href="#our-foundation" class="nav-link">Foundation</a>
             <a href="#partners" class="mobile-link block">Partners</a>
             <a href="#contact" class="mobile-link block">Contact</a>
         </div>
@@ -76,103 +78,124 @@
         }
     </style>
 
-    <!-- Office Section -->
-    <section id="office" class="pt-24 pb-32 bg-[#000000] animate-fade-in">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="office" class="min-h-screen flex items-center bg-[#000000] py-20 animate-fade-in">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+            <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-12 tracking-wide">
                 Our Office
             </h2>
 
             <div class="flex flex-col md:flex-row items-center gap-12">
 
-                <!-- Office Collage -->
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="grid grid-cols-2 gap-4 w-full max-w-md">
+                <div class="md:w-1/2 w-full flex flex-col items-center">
+                    <div class="relative w-full max-w-md overflow-hidden rounded-lg shadow-lg group">
+                        <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                            <img src="ourOffice/outsideOfTheOffice.jpg" alt="Outside Office"
+                                class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                            <img src="ourOffice/lobbyOfOffice.jpg" alt="The Office"
+                                class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                            <img src="ourOffice/theOffice.jpg" alt="Lobby"
+                                class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                        </div>
 
-                        <!-- Outside Image (Now on Top) -->
-                        <img src="ourOffice/outsideOfTheOffice.jpg" alt="Outside of the Office"
-                            class="w-full h-40 object-cover rounded-lg shadow-md col-span-2">
+                        <button onclick="moveSlide(-1)"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                            &#10094;
+                        </button>
+                        <button onclick="moveSlide(1)"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                            &#10095;
+                        </button>
+                    </div>
 
-                        <!-- Portrait Image 1 -->
-                        <img src="ourOffice/theOffice.jpg" alt="Office Portrait 1"
-                            class="w-full h-48 object-cover rounded-lg shadow-md col-span-1">
-
-                        <!-- Portrait Image 2 -->
-                        <img src="ourOffice/lobbyOfOffice.jpg" alt="Office Portrait 2"
-                            class="w-full h-48 object-cover rounded-lg shadow-md col-span-1">
-
+                    <div class="flex gap-2 mt-6">
+                        <div class="dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 w-6"
+                            onclick="currentSlide(0)"></div>
+                        <div class="dot w-3 h-3 rounded-full bg-gray-600 cursor-pointer transition-all duration-300"
+                            onclick="currentSlide(1)"></div>
+                        <div class="dot w-3 h-3 rounded-full bg-gray-600 cursor-pointer transition-all duration-300"
+                            onclick="currentSlide(2)"></div>
                     </div>
                 </div>
 
-
-                <!-- Office Content -->
                 <div class="md:w-1/2">
-                    <p class="text-white mb-4">
-                        🛫 <span class="text-[#DC143C] font-semibold">Bridgeway Visa Travel Corporation</span> offers a
+                    <p class="text-gray-200 text-lg mb-6 leading-relaxed">
+                        <span class="text-[#DC143C] font-semibold">Bridgeway Visa Travel Corporation</span> offers a
                         welcoming and professional office ambiance that reflects its commitment to quality service.
                         The space is well-organized, with a clean and modern layout that puts clients at ease the moment
                         they walk in.
                     </p>
 
-                    <p class="text-white mb-4">
+                    <p class="text-gray-200 text-lg mb-8 leading-relaxed">
                         Staff are approachable and attentive, creating a warm and efficient environment perfect for
                         travel consultations and visa processing.
                     </p>
 
                     <a href="#contact"
-                        class="inline-block mt-4 text-[#DC143C] border border-[#DC143C] px-5 py-2 rounded-md hover:bg-[#DC143C] hover:text-white transition duration-300">
+                        class="inline-block text-[#DC143C] border-2 border-[#DC143C] px-8 py-3 rounded-md font-bold hover:bg-[#DC143C] hover:text-white transition duration-300">
                         Contact Us
                     </a>
                 </div>
 
             </div>
-
-            <!-- ⭐ Office Location Video Section (Matching Button Style) -->
-            <div class="mt-20 text-center">
-                <h3 class="text-2xl text-white font-semibold mb-4">
-                    See Where Our Office Is Located
-                </h3>
-
-                <p class="text-gray-300 text-lg mb-10">
-                    Watch this short video to see exactly where our office is located.
-                </p>
-
-                <a href="https://drive.google.com/file/d/108L-syeYM57UT68X2WW9HdIduRO8Xid1/view?usp=sharing"
-                    target="_blank"
-                    class="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow-md hover:bg-red-700 transition">
-                    ▶ Watch Video
-                </a>
-            </div>
-
         </div>
     </section>
 
+    <script>
+        let currentIndex = 0;
+        const slides = document.getElementById('slider');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = dots.length;
 
-    <!-- Services Section -->
-    <section id="services" class="py-20">
-        <!-- Services content -->
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+        function updateSlider() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('bg-red-700', 'w-6');
+                    dot.classList.remove('bg-gray-600');
+                } else {
+                    dot.classList.remove('bg-red-700', 'w-6');
+                    dot.classList.add('bg-gray-600');
+                }
+            });
+        }
+
+        function moveSlide(direction) {
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        setInterval(() => moveSlide(1), 5000);
+    </script>
+
+
+    <section id="services" class="min-h-screen flex items-center bg-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-12 tracking-wide">
                 Services We Offer
             </h2>
 
             <div id="services-accordion" class="space-y-4">
-                <!-- TOURIST VISA -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-4 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="tourist">
                         <span>TOURIST VISA</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="tourist">
-                        <div class="px-6 pb-5 pt-2">
-                            <p id="tourist visa">
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-200">
                                 Tourist visas are non-immigrant visas granted to persons who want to enter a certain
                                 country temporarily for business, leisure, or a combination of both. The duration of
                                 your stay depends on the Embassy Consul's approval.
@@ -181,430 +204,568 @@
                     </div>
                 </div>
 
-                <!-- STUDENT VISA -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-4 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="student">
                         <span>STUDENT VISA</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="student">
-                        <div class="px-6 pb-5 pt-2">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-200">
                                 A student visa allows foreign students to stay in their preferred country for the
                                 duration of their studies. Students must first be enrolled in a qualified institution.
-                                The visa period covers the entire course duration, and the type of visa depends on the
-                                course and institution.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- DEPENDENT VISA / OPEN WORK PERMIT -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-4 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="dependent">
                         <span>DEPENDENT VISA / OPEN WORK PERMIT</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="dependent">
-                        <div class="px-6 pb-5 pt-2">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-200">
                                 This visa allows dependents of legal residents or citizens to enter and remain in a
-                                country. The sponsor (resident) is responsible for initiating and managing the
-                                application.
+                                country. The sponsor (resident) is responsible for initiating the application.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- POST GRADUATION WORK VISA -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-4 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="postgrad">
                         <span>POST GRADUATION WORK VISA</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="postgrad">
-                        <div class="px-6 pb-5 pt-2">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-200">
                                 This visa is granted to international students who have completed studies at a
-                                recognized institution. It allows them to stay and work for a set period to gain
-                                experience in their field.
+                                recognized institution. It allows them to work for a set period.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- RESIDENCY & CITIZENSHIP -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-4 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="residency">
                         <span>RESIDENCY & CITIZENSHIP</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="residency">
-                        <div class="px-6 pb-5 pt-2">
-                            <p>
-                                Our Residency and Citizenship program offers a step-by-step solution for individuals and
-                                families to obtain legal residency and eventually full citizenship in a new country.
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-200">
+                                Our Residency and Citizenship program offers a step-by-step solution for individuals
+                                to obtain legal residency and eventually full citizenship.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- SKILLS MIGRATION -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
+                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-4 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="skills">
                         <span>SKILLS MIGRATION</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="skills">
-                        <div class="px-6 pb-5 pt-2">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-200">
                                 Australia's skilled migration program is designed to attract workers with specific
-                                skills that are in demand across the country. If you're looking to migrate to Australia
-                                based on your skills, there are several pathways to consider depending on your
-                                occupation, qualifications, and experience.
+                                skills that are in demand across the country.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- Featured Programs Section -->
-            <div class="mt-16 relative">
-                <!-- <h3 class="text-2xl font-bold text-red-800 mb-8 text-center">Featured Programs</h3> -->
-                <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
-                    Featured Programs
-                </h2>
-
-                <!-- Scroll Buttons -->
-                <button id="scrollLeft"
-                    class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black z-10 shadow-lg p-3 rounded-full text-2xl font-bold text-red-600 hover:bg-red-100 transition duration-300"
-                    aria-label="Scroll Left">
-                    &lt;
-                </button>
-                <button id="scrollRight"
-                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black z-10 shadow-lg p-3 rounded-full text-2xl font-bold text-red-600 hover:bg-red-100 transition duration-300"
-                    aria-label="Scroll Right">
-                    &gt;
-                </button>
-
-                <!-- Scrollable Container -->
-                <div id="scrollContainer"
-                    class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar py-6 mx-auto w-full max-w-[660px] px-4">
-
-                    <!-- Card 1 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/continuingCareAssisstant.jpg"
-                                alt="Continuing Care Assistant Program"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Continuing Care Assistant Program</h4>
-                            <p class="text-white mb-4 flex-1">Start your career in healthcare and make a difference in
-                                the lives of others.</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/studyInGermany.jpg" alt="Student Visa in Canada"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Free Tuition Fee Program in Germany</h4>
-                            <p class="text-white mb-4 flex-1">Gives you a chance to study + work in Germany without
-                                paying for Tuition Fee</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/studyInAustrillia.jpg" alt="Study in Australia"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Study in Australia</h4>
-                            <p class="text-white mb-4 flex-1">Unlock opportunities at top Australian universities.</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/longtermResidencyPathwayNewZealand.jpg"
-                                alt="Residency Pathway in New Zealand"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Residency Pathway in New Zealand</h4>
-                            <p class="text-white mb-4 flex-1">Discover your route to long-term residency in New Zealand.
-                            </p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/TravelToSpain.jpg" alt="Travel to Spain"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Travel to Spain</h4>
-                            <p class="text-white mb-4 flex-1">Experience the vibrant culture, history, and beauty of
-                                Spain.</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/generalSkillMigrantVisa.jpg" alt="General Skilled Migrant Visa"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">General Skilled Migrant Visa</h4>
-                            <p class="text-white mb-4 flex-1">Take the next step in your career abroad with skilled
-                                migration programs.</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 7 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/StudyInUnitedKingdom.jpg" alt="Study in the United Kingdom"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Study in the United Kingdom</h4>
-                            <p class="text-white mb-4 flex-1">Explore educational opportunities in top universities
-                                across the UK.</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <div class="bg-black rounded-lg shadow-lg overflow-hidden flex flex-col w-[300px] flex-shrink-0">
-                        <div class="w-full h-80 mb-6">
-                            <img src="featuredPrograms/studyAbroad.jpg" alt="Study Abroad Program"
-                                class="w-full h-full object-cover rounded-lg shadow-md transform transition duration-300 hover:scale-105" />
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <h4 class="font-semibold text-lg text-red-700 mb-2">Study Abroad Program</h4>
-                            <p class="text-white mb-4 flex-1">Open the door to global education experiences around the
-                                world.</p>
-                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="btn-primary text-center py-2 px-4 rounded-md font-medium mt-auto">Message us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hide Scrollbar -->
-            <style>
-                .no-scrollbar::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .no-scrollbar {
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
-                }
-            </style>
-
-            <!-- Scroll Script (Auto Scroll Removed) -->
-            <script>
-                const scrollContainer = document.getElementById('scrollContainer');
-                const cardWidth = 300;
-                const gap = 24;
-
-                function getCardsPerScroll() {
-                    return window.innerWidth < 1024 ? 1 : 2; // 1 card on small screens, 2 on large
-                }
-
-                function getScrollAmount() {
-                    return (cardWidth + gap) * getCardsPerScroll();
-                }
-
-                document.getElementById('scrollLeft').addEventListener('click', () => {
-                    scrollContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-                });
-
-                document.getElementById('scrollRight').addEventListener('click', () => {
-                    scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-                });
-            </script>
-
-
         </div>
     </section>
-
-    <!-- Visa Consultants Section -->
-    <section id="consultants" class="bg-black py-20">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-
-            <!-- Section Title -->
-            <h2 class="text-4xl font-bold text-red-600 mb-6">
-                Visa Consultants
-            </h2>
-
-            <!-- Section Description -->
-            <p class="text-gray-300 text-lg mb-10">
-                Our expert visa consultants are here to guide you through every step of your application process.
-            </p>
-
-            <!-- Watch Video Button -->
-            <div class="mt-6">
-                <a href="https://drive.google.com/file/d/1qSjNjaToiIcESgqS43oeK7GY2nlyjlFC/view" target="_blank"
-                    class="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow-md hover:bg-red-700 transition">
-                    ▶ Watch Video
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-
 
     <script>
-        const video = document.getElementById('consultantVideo');
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionButtons = document.querySelectorAll('.accordion-btn');
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        video.play();  // play when section is visible
-                    } else {
-                        video.pause(); // pause when out of view
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('.accordion-icon');
+
+                    // FIX: Check if it's currently open (handling the initial empty state)
+                    const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== "";
+
+                    // Close all other sections
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        c.style.maxHeight = '0px';
+                    });
+                    document.querySelectorAll('.accordion-icon').forEach(i => {
+                        i.style.transform = 'rotate(0deg)';
+                    });
+
+                    // If it was closed, open it now
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
                     }
                 });
-            },
-            { threshold: 0.5 } // 50% of video must be visible
-        );
-
-        observer.observe(video);
+            });
+        });
     </script>
 
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
 
+            100% {
+                transform: translateX(-33.333%);
+            }
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white-100">
-        <!-- About content -->
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- <h2 class="section-title">About Us</h2> -->
-            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+            /* Move only 1/3 of the tripled width */
+        }
+
+        .animate-infinite-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+            cursor: grab;
+            user-select: none;
+        }
+
+        /* Prevent images from being dragged by the browser */
+        .animate-infinite-scroll img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+
+        .animate-infinite-scroll.is-dragging {
+            animation-play-state: paused !important;
+            cursor: grabbing;
+        }
+
+        /* Pause on hover only when not dragging */
+        .group:hover .animate-infinite-scroll:not(.is-dragging) {
+            animation-play-state: paused;
+        }
+
+        #scrollContainer {
+            will-change: transform;
+            display: flex;
+        }
+    </style>
+
+    <section id="featured-programs"
+        class="min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-10 md:mb-16 tracking-wide uppercase">
+                Featured Programs
+            </h2>
+
+            <div class="relative group overflow-hidden">
+                <div
+                    class="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-zinc-950 to-transparent z-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-zinc-950 to-transparent z-10 pointer-events-none">
+                </div>
+
+                <div id="scrollContainer" class="animate-infinite-scroll gap-4 md:gap-8 py-4">
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/continuingCareAssisstant.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Continuing Care Assistant
+                            </h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Start your career in healthcare and make a difference in the lives of others.
+                            </p>
+                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/studyInGermany.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Free Tuition in Germany
+                            </h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Study and work in Germany without the burden of tuition fees.
+                            </p>
+                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/studyInAustrillia.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Study in Australia</h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Unlock opportunities at top Australian universities and gain global exposure.
+                            </p>
+                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/longtermResidencyPathwayNewZealand.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">New Zealand Residency</h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Your long-term route to residency in the beautiful landscapes of NZ.
+                            </p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/TravelToSpain.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Travel to Spain</h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Experience the vibrant culture, history, and beauty of Spain.
+                            </p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/generalSkillMigrantVisa.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Skills Migration</h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Take the next step in your career abroad with skilled migration programs.
+                            </p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/StudyInUnitedKingdom.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Study in the UK</h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Explore educational opportunities in top universities across the UK.
+                            </p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/studyAbroad.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-6 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-lg md:text-xl text-white mb-2 md:mb-3">Study Abroad Program</h4>
+                            <p
+                                class="text-gray-300 text-xs md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Open the door to global education experiences around the world.
+                            </p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold transition-colors">
+                                Message us
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 md:gap-8" id="clone-target"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const container = document.querySelector('#scrollContainer');
+
+        // 1. Triple the content to allow infinite left/right swiping
+        const initialContent = container.innerHTML;
+        container.innerHTML = initialContent + initialContent + initialContent;
+
+        let isDown = false;
+        let startX;
+        let currentTranslate = 0;
+
+        function getComputedTranslateX(obj) {
+            const style = window.getComputedStyle(obj);
+            const matrix = new WebKitCSSMatrix(style.transform);
+            return matrix.m41;
+        }
+
+        const start = (e) => {
+            isDown = true;
+            container.classList.add('is-dragging');
+
+            const currentX = getComputedTranslateX(container);
+            container.style.transform = `translateX(${currentX}px)`;
+
+            startX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
+            currentTranslate = currentX;
+        };
+
+        const end = () => {
+            if (!isDown) return;
+            isDown = false;
+            container.classList.remove('is-dragging');
+            // Resume CSS animation from current position
+            container.style.transform = '';
+        };
+
+        const move = (e) => {
+            if (!isDown) return;
+
+            const x = (e.pageX || (e.touches ? e.touches[0].pageX : 0)) - container.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            let newTransform = currentTranslate + walk;
+
+            // 33.33% is the width of one original set of cards
+            const thirdWidth = container.scrollWidth / 3;
+
+            // IF swipe too far RIGHT (reaching the start)
+            if (newTransform > 0) {
+                newTransform -= thirdWidth;
+                currentTranslate -= thirdWidth;
+                startX = x;
+            }
+            // IF swipe too far LEFT (reaching the end)
+            else if (newTransform < -(thirdWidth * 2)) {
+                newTransform += thirdWidth;
+                currentTranslate += thirdWidth;
+                startX = x;
+            }
+
+            container.style.transform = `translateX(${newTransform}px)`;
+        };
+
+        // Event Listeners
+        container.addEventListener('mousedown', start);
+        window.addEventListener('mousemove', move);
+        window.addEventListener('mouseup', end);
+
+        container.addEventListener('touchstart', start, { passive: true });
+        window.addEventListener('touchmove', move, { passive: false });
+        window.addEventListener('touchend', end);
+    </script>
+
+    <!--About Us  -->
+    <section id="about" class="min-h-screen flex items-center bg-zinc-950 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-12 md:mb-16 tracking-wide uppercase">
                 About Us
             </h2>
 
-            <div class="flex flex-col md:flex-row items-start gap-12">
-                <!-- Left: Image -->
-                <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
-                    <img src="logo.jpg" alt="BVTC Global Recruitment team" class="rounded-lg shadow-xl w-full max-w-md">
+            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+                <div class="lg:w-1/2 relative group w-full max-w-md lg:max-w-none">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-red-700 to-zinc-800 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                    </div>
+                    <div class="relative">
+                        <img src="logo.jpg" alt="BVTC Global Recruitment team"
+                            class="rounded-2xl shadow-2xl w-full object-cover grayscale-[20%] hover:grayscale-0 transition duration-500">
+                    </div>
                 </div>
 
-                <!-- Right: Content -->
-                <div class="md:w-1/2 text-white space-y-4">
-                    <p class="text-xl font-bold text-red-500">✈️ Bridgeway Visa Travel Corporation: Your Path to a
-                        Brighter Future</p>
+                <div class="lg:w-1/2 space-y-6 md:space-y-8">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                            Bridgeway Visa Travel Corporation
+                        </h3>
+                        <div class="flex items-center gap-3">
+                            <div class="h-1 w-12 bg-red-700"></div>
+                            <p class="text-red-500 font-semibold uppercase tracking-widest text-sm">
+                                Your Path to a Brighter Future
+                            </p>
+                        </div>
+                    </div>
 
-                    <p>
-                        Make your global dreams a reality with Bridgeway! We offer:
+                    <p class="text-gray-400 leading-relaxed text-base md:text-lg">
+                        Turn your global aspirations into reality. We provide comprehensive pathways for professionals
+                        and students looking to expand their horizons through international education and career
+                        opportunities.
                     </p>
 
-                    <ul class="list-none space-y-1">
-                        <li>✅ <strong>Study + Work Abroad</strong> – Gain experience while earning your degree</li>
-                        <li>✅ <strong>Complete Visa Assistance</strong> – Student, Tourist, Dependent & more</li>
-                        <li>✅ <strong>Top Partner Schools</strong> – Choose quality institutions worldwide</li>
-                        <li>✅ <strong>Hot Courses</strong> – Nursing, IT, Engineering, Business & Caregiving</li>
-                        <li>✅ <strong>Career Pathways</strong> – Post-graduation jobs & residency opportunities</li>
-                        <li>✅ <strong>Flexible & Affordable Programs</strong> – Designed for your goals & budget</li>
-                    </ul>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 md:gap-y-5">
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">Study + Work Abroad</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">Visa Assistance</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">Top Partner Schools</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">High-Demand Courses</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">Residency Pathways</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-red-600 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-300">Affordable Programs</span>
+                        </div>
+                    </div>
 
-                    <p class="mt-4 font-semibold">🎓 Why Bridgeway?</p>
-                    <ul class="list-none space-y-1">
-                        <li>✔️ Earn while studying</li>
-                        <li>✔️ Boost your credentials</li>
-                        <li>✔️ Build global connections</li>
-                        <li>✔️ Open doors to residency</li>
-                        <li>✔️ Secure your future</li>
-                    </ul>
-
-                    <p class="mt-4">
-                        🌟 <strong>With Bridgeway, you're not just applying — you're preparing for a new
-                            life.</strong><br>
-                        Let’s make it happen!
-                    </p>
+                    <div class="pt-6 md:pt-8 border-t border-white/10">
+                        <p class="text-white italic font-medium text-lg leading-relaxed">
+                            "With Bridgeway, you're not just applying — <span class="text-red-500">you're preparing for
+                                a new life.</span>"
+                        </p>
+                        <p class="text-gray-500 mt-2 text-sm uppercase tracking-widest">Let's make it happen</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Accordion Section -->
-    <section class="py-12 bg-black">
-        <!-- Accordion content -->
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <section id="our-foundation"
+        class="min-h-screen w-full bg-black text-white flex flex-col justify-center py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-12 tracking-wide">
+                Our Foundation
+            </h2>
+
             <div id="about-accordion" class="space-y-4">
-                <!-- Mission -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
-                    <button type="button" aria-expanded="false"
-                        class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-red-800 bg-red-100 hover:bg-red-200 focus:outline-none transition accordion-btn"
+
+                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="mission">
-                        <span>Mission</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <span>MISSION</span>
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white-700 transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="mission">
-                        <div class="px-6 pb-5 pt-2 leading-relaxed">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-300">
                                 Bridgeway Visa Travel Corporation commits to offering a high standard of service
                                 to its clients. The company aims to create and promote a healthy, exuberant,
                                 respectful, and enjoyable operating environment. We are imbued with the values
@@ -614,21 +775,21 @@
                         </div>
                     </div>
                 </div>
-                <!-- Vision -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
-                    <button type="button" aria-expanded="false"
-                        class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-red-800 bg-red-100 hover:bg-red-200 focus:outline-none transition accordion-btn"
+
+                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="vision">
-                        <span>Vision</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <span>VISION</span>
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div class="accordion-content bg-black text-white-700 transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="vision">
-                        <div class="px-6 pb-5 pt-2 leading-relaxed">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-300">
                                 To be the most trusted and dynamic visa and travel solutions provider—empowering
                                 dreams, connecting people across borders, and setting the benchmark for
                                 excellence in customer service through unwavering integrity, professionalism,
@@ -637,77 +798,153 @@
                         </div>
                     </div>
                 </div>
-                <!-- Commitment and Compliance -->
-                <div class="border border-white rounded-lg overflow-hidden">
-                    <button type="button" aria-expanded="false" aria-controls="compliance-content"
-                        class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-red-800 bg-red-100 hover:bg-red-200 focus:outline-none transition accordion-btn"
+
+                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
                         data-accordion="compliance">
-                        <span>Commitment and Compliance</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
+                        <span>COMMITMENT AND COMPLIANCE</span>
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div id="compliance-content"
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="compliance">
-                        <div class="px-6 pb-5 pt-2 leading-relaxed space-y-3">
-                            <p>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 space-y-4">
+                            <p class="leading-relaxed text-gray-300">
                                 At Bridgeway Visa Travel Corporation, we uphold the highest standards of
                                 professionalism,
-                                transparency, and regulatory compliance in every facet of our operations. As a trusted
-                                travel
-                                and visa consultancy in the Philippines, our commitment is reflected in the following
-                                principles:
+                                transparency, and regulatory compliance in every facet of our operations.
                             </p>
-                            <ul class="list-none space-y-2">
-                                <li>✅ Legally registered with SEC, BIR, LOCATION CLEARANCE, and MAYOR'S PERMIT.</li>
-                                <li>🤝 Upholds ethical standards and consumer protection laws</li>
-                                <li>👥 Continuously trains staff for quality visa and travel service</li>
-                                <li>📍 Provides accurate, transparent, and responsive support to clients</li>
+                            <ul class="list-none space-y-2 text-gray-300">
+                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span> Legally
+                                    registered with SEC, BIR, LOCATION CLEARANCE, and MAYOR'S PERMIT.</li>
+                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span> Upholds
+                                    ethical standards and consumer protection laws</li>
+                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span>
+                                    Continuously trains staff for quality visa and travel service</li>
+                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span> Provides
+                                    accurate, transparent, and responsive support</li>
                             </ul>
-                            <p>
-                                We strive to make international travel smooth, secure, and accessible.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        data-accordion="whychoose">
+                        <span>WHY CHOOSE BRIDGEWAY?</span>
+                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8">
+                            <p class="leading-relaxed text-gray-300">
+                                Choosing a travel partner like Bridgeway Visa Travel Corporation is more than a
+                                transaction—it's a leap toward your dreams.<br><br>
+                                <strong class="text-white">Trust and reliability:</strong> We don’t just send you
+                                places—we walk with you through every step.<br>
+                                <strong class="text-white">Expertise and care:</strong> Your journey is our mission.<br>
+                                <strong class="text-white">Empowerment:</strong> We turn paperwork into possibilities.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Why choose Bridgeway Visa Travel Corporation?. -->
-                <div class="border border-white-200 rounded-lg overflow-hidden">
-                    <button type="button" aria-expanded="false"
-                        class="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold text-red-800 bg-red-100 hover:bg-red-200 focus:outline-none transition accordion-btn"
-                        data-accordion="whychoose">
-                        <span>Why choose Bridgeway Visa Travel Corporation?</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="accordion-content bg-black text-white-700 transition-all duration-300 max-h-0 overflow-hidden"
-                        data-content="whychoose">
-                        <div class="px-6 pb-5 pt-2 leading-relaxed space-y-3">
-                            <p>
-                                Choosing a travel partner like Bridgeway Visa Travel Corporation is more than a
-                                transaction—it's a leap toward your dreams.<br>
-                                <strong>Trust and reliability:</strong> We don’t just send you places—we walk
-                                with you through every step.<br>
-                                <strong>Expertise and care:</strong> Your journey is our mission.<br>
-                                <strong>Empowerment:</strong> We turn paperwork into possibilities.
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners Section -->
-    <section id="partners" class="py-20">
-        <!-- Partners content -->
+    <script>
+        // Ensures script runs after HTML is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionButtons = document.querySelectorAll('.accordion-btn');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('.accordion-icon');
+
+                    // Check if currently open
+                    const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+
+                    // Close all sections to ensure only one is open at a time
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        c.style.maxHeight = '0px';
+                    });
+                    document.querySelectorAll('.accordion-icon').forEach(i => {
+                        i.style.transform = 'rotate(0deg)';
+                    });
+
+                    // If it was closed, open it
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* Continuous auto-scroll animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-33.333%);
+            }
+        }
+
+        .animate-infinite-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 20s linear infinite;
+            /* Adjusted time for a smoother pace */
+            cursor: grab;
+            user-select: none;
+        }
+
+        /* Standardizes card width so they don't shrink */
+        .partner-card {
+            flex: 0 0 380px;
+            /* Fixed width for consistency in the carousel */
+        }
+
+        .animate-infinite-scroll img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+
+        .animate-infinite-scroll.is-dragging {
+            animation-play-state: paused !important;
+            cursor: grabbing;
+        }
+
+        /* Pause on hover */
+        .carousel-viewport:hover .animate-infinite-scroll:not(.is-dragging) {
+            animation-play-state: paused;
+        }
+
+        .carousel-viewport {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+    </style>
+
+    <section id="partners" class="py-20 bg-black overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <!-- <h2 class="text-3xl font-bold text-red-800 text-center mb-6">Our Partners</h2> -->
-            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-10 tracking-wide">
+            <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-12 tracking-wide">
                 Our Partners
             </h2>
             <div class="text-center mb-12">
@@ -716,482 +953,489 @@
                 </p>
             </div>
 
-            <!-- Cards Container -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            <div class="carousel-viewport group">
+                <div id="scrollContainer" class="animate-infinite-scroll gap-8">
 
-                <!-- Skyline International College -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
+                    <div class="flex gap-8 carousel-item-group">
                         <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/skylineInternationalCollege.jpg"
-                                alt="Skyline International College Logo" class="object-contain w-full h-full" />
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/skylineInternationalCollege.jpg" alt="Skyline Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Skyline International College</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Career-Focused Courses</p>
+                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                                    <li>Affordable Tuition</li>
+                                    <li>Online & On-Campus Options</li>
+                                    <li>Official Accreditation</li>
+                                    <li>Work Opportunities</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Skyline blends practical education with
+                                    affordability.</p>
+                            </div>
                         </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Skyline International College</h4>
-                        <p class="text-gray-300 text-sm italic mb-2">Career-Focused Courses in business, hospitality,
-                            and more</p>
-                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                            <li>👉 Affordable Tuition compared to many Australian institutions</li>
-                            <li>👉 Online & On-Campus Options for flexible learning</li>
-                            <li>👉 Supportive Environment with engaging trainers and student activities</li>
-                            <li>👉 Official Accreditation by ASQA and CRICOS</li>
-                            <li>👉 Work Opportunities while studying</li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Skyline blends practical education with affordability and strong student support.
-                        </p>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/timesEducation.jpg" alt="Times Education Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Times Education</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Practical, career-oriented learning</p>
+                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                                    <li>Practical Training</li>
+                                    <li>Budget-Friendly Tuition</li>
+                                    <li>ASQA & CRICOS Accredited</li>
+                                    <li>Industry-Aligned Programs</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Delivers skills-focused learning with
+                                    flexibility.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/GoozingMigration.jpg" alt="Goozing Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Goozing Immigration</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Personalized visa assistance</p>
+                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                                    <li>Tailored Visa Assistance</li>
+                                    <li>Education Partnerships</li>
+                                    <li>Responsive Support</li>
+                                    <li>Migration Expertise</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Makes migration less stressful with guidance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/canberraCollegeOfManagement&Technology.jpg" alt="CCMT Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Canberra College (CCMT)</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Business and tech disciplines</p>
+                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                                    <li>Specialized Programs</li>
+                                    <li>Local Accessibility</li>
+                                    <li>Hands-On Learning</li>
+                                    <li>Community Engagement</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Vocational learning rooted in real-world
+                                    experience.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/Adventus.io.jpg" alt="Adventus Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Adventus</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Global provider of ICT services</p>
+                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                                    <li>24/7 ICT support</li>
+                                    <li>Simplifies admissions</li>
+                                    <li>Strategic industry partnerships</li>
+                                    <li>Employee perks & healthcare</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Empowers institutions and students through
+                                    innovation.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/InternationalBusinessUniversity.jpg" alt="IBU Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">International Business University</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Innovative academic pathways</p>
+                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                                    <li>Digital transformation focus</li>
+                                    <li>Real-world application</li>
+                                    <li>Modern resources</li>
+                                    <li>Career-readiness programs</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Helping students grow via future-ready
+                                    education.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/GEEBEE.jpg" alt="Geebee Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Geebee Education</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">900+ international universities</p>
+                                <p class="text-gray-300 text-sm mb-2">Opportunities in the USA, Canada, Australia, UK,
+                                    and Europe.</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Supporting students in exploring global goals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/TRENT.png" alt="TRENT Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">TRENT Global College</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">Practical Singapore-based programs</p>
+                                <p class="text-gray-300 text-sm mb-2">Short course durations with paid internships and
+                                    hands-on experience.</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Combines education with real-world Singapore
+                                    experience.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                            <div>
+                                <div
+                                    class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                                    <img src="ourPartners/FLEEMING.jpg" alt="Fleming Logo"
+                                        class="object-contain w-full h-full" />
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1">Fleming College</h4>
+                                <p class="text-gray-300 text-sm italic mb-2">High-demand programs in Canada</p>
+                                <p class="text-gray-300 text-sm mb-2">Nursing, AI, and Caregiving with industry
+                                    placements.</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <p class="text-gray-400 italic text-sm">Preparing graduates for successful careers in
+                                    Canada.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Times Education -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/timesEducation.jpg" alt="Times Education Logo"
-                                class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Times Education</h4>
-                        <p class="text-gray-300 text-sm italic mb-2">Practical, career-oriented learning for global
-                            students</p>
-                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                            <li>👉 Practical Training in business, hospitality, IT & leadership</li>
-                            <li>👉 Flexible Study Modes: online + on-campus</li>
-                            <li>👉 Budget-Friendly Tuition</li>
-                            <li>👉 ASQA & CRICOS Accredited</li>
-                            <li>👉 Industry-Aligned Programs for job readiness</li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Times Education delivers skills-focused learning with flexibility and affordability.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Goozing Immigration -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/GoozingMigration.jpg" alt="Goozing Migration Logo"
-                                class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Goozing Immigration</h4>
-                        <p class="text-gray-300 text-sm italic mb-2">Personalized and practical visa assistance</p>
-                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                            <li>🌟 Tailored Visa Assistance for student, skilled worker, and partner visas</li>
-                            <li>🌟 Education Partnerships with accredited institutions</li>
-                            <li>🌟 Responsive Support with one-on-one consultations</li>
-                            <li>🌟 Migration Expertise with updated policy knowledge</li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Goozing Immigration makes migration less stressful with personalized guidance.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Canberra College of Management and Technology -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/canberraCollegeOfManagement&Technology.jpg"
-                                alt="Canberra College Logo" class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Canberra College of Management and Technology</h4>
-                        <p class="text-gray-300 text-sm italic mb-2">Focused on business and tech disciplines</p>
-                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                            <li>🎯 Specialized Programs in business, finance, and management</li>
-                            <li>🎯 Local Accessibility with affordable tuition</li>
-                            <li>🎯 Hands-On Learning with practical instruction</li>
-                            <li>🎯 Community Engagement through internships and partnerships</li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            CCMT delivers vocational learning rooted in real-world experience.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Adventus -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/Adventus.io.jpg" alt="Adventus Logo"
-                                class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Adventus</h4>
-                        <p class="text-gray-300 text-sm italic mb-2">Global provider of ICT and education services</p>
-                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                            <li>🌐 24/7 ICT support and consulting</li>
-                            <li>🌐 Adventus.io simplifies university admissions</li>
-                            <li>🌐 Strategic industry partnerships</li>
-                            <li>🌐 Employee perks: healthcare, birthday leave, pantry access</li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Adventus empowers both institutions and students through innovation.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- International Business University -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/InternationalBusinessUniversity.jpg"
-                                alt="International Business University Logo" class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">International Business University</h4>
-                        <p class="text-gray-300 text-sm italic mb-2">Innovative academic pathways for global
-                            professionals</p>
-                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                            <li>📘 Curriculum focused on digital transformation, entrepreneurship, and innovation</li>
-                            <li>📘 Blends theoretical learning with real-world application</li>
-                            <li>📘 Supportive academic environment with modern resources</li>
-                            <li>📘 Career-readiness programs embedded in coursework</li>
-                        </ul>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            IBU helps students grow academically and professionally through relevant and future-ready
-                            education.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- GEEBEE -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/GEEBEE.jpg" alt="Leap Geebee Education Logo"
-                                class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Geebee Education</h4>
-
-                        <p class="text-gray-300 text-sm italic mb-2">
-                            Connecting students to over 900 international universities across the globe.
-                        </p>
-
-                        <!-- Updated paragraph for GEEBEE context -->
-                        <p class="text-gray-300 text-sm mb-2">
-                            We are partnered with <span class="font-semibold text-white">Geebee Education</span>,
-                            giving students access to study opportunities in the USA, Canada, Australia, the UK, New
-                            Zealand,
-                            and several European countries.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Geebee Education supports students in achieving their academic goals and exploring
-                            international opportunities with confidence.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- TRENT -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/TRENT.png" alt="TRENT Global College Logo"
-                                class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">TRENT Global College</h4>
-
-                        <p class="text-gray-300 text-sm italic mb-2">
-                            Practical, industry-focused programs with international recognition.
-                        </p>
-
-                        <!-- Main context paragraph -->
-                        <p class="text-gray-300 text-sm mb-2">
-                            Trent Global College offers practical, industry-focused programs in Singapore with short
-                            course durations and the opportunity for students to work full-time during paid internships.
-                            This enables learners to gain valuable skills and hands-on experience, enhancing their
-                            prospects for securing high-paying jobs overseas after obtaining internationally recognized
-                            qualifications in Singapore.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Trent Global College prepares students for global careers by combining education with
-                            real-world experience.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FLEEMING -->
-                <div
-                    class="bg-black p-8 rounded-xl shadow-lg border border-white w-full max-w-sm h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-red-300">
-                    <div>
-                        <div
-                            class="w-40 h-24 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                            <img src="ourPartners/FLEEMING.jpg" alt="Fleming College Logo"
-                                class="object-contain w-full h-full" />
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-1">Fleming College</h4>
-
-                        <p class="text-gray-300 text-sm italic mb-2">
-                            High-demand, industry-focused programs in Canada for career-ready graduates.
-                        </p>
-
-                        <!-- Main context paragraph -->
-                        <p class="text-gray-300 text-sm mb-2">
-                            Fleming College offers students a wide range of program options in Canada, including
-                            Practical Nursing,
-                            Personal Support Worker/Caregiving, and specialized courses in Artificial Intelligence.
-                            Programs include
-                            practical training and opportunities to gain hands-on experience through industry
-                            placements.
-                        </p>
-                    </div>
-                    <div class="mt-auto pt-4">
-                        <p class="text-gray-400 italic">
-                            Fleming College helps students acquire valuable skills and internationally recognized
-                            qualifications,
-                            preparing them for successful careers abroad.
-                        </p>
-                    </div>
-                </div>
-
-
             </div>
-
-        </div>
-
-    </section>
-
-    <!--paymment channel-->
-    <section id="payment-channels" class="py-12 px-4 bg-white-50">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-red-800 mb-6">Payment Channels</h2>
-            <img src="OfficialPaymentChanel.jpg" alt="Official Payment Channels"
-                class="mx-auto w-full max-w-md md:max-w-lg rounded-lg shadow hover:scale-105 transition duration-300">
         </div>
     </section>
+
+    <script>
+        const container = document.querySelector('#scrollContainer');
+
+        // 1. Triple the content so the 'tail' always has a 'head' following it
+        // This allows for a seamless loop in both directions
+        const initialContent = container.innerHTML;
+        container.innerHTML = initialContent + initialContent + initialContent;
+
+        let isDown = false;
+        let startX;
+        let currentTranslate = 0;
+
+        // Helper to get current X position accurately even while CSS animation is running
+        function getComputedTranslateX(obj) {
+            const style = window.getComputedStyle(obj);
+            const matrix = new WebKitCSSMatrix(style.transform);
+            return matrix.m41;
+        }
+
+        const start = (e) => {
+            isDown = true;
+            container.classList.add('is-dragging');
+
+            // Capture the exact pixel position where the animation was at the moment of touch
+            const currentX = getComputedTranslateX(container);
+
+            // Stop the CSS loop so it doesn't fight the user's hand
+            container.style.animation = 'none';
+            container.style.transform = `translateX(${currentX}px)`;
+
+            // Set up coordinates for the move calculation
+            startX = (e.pageX || e.touches[0].pageX) - container.offsetLeft;
+            currentTranslate = currentX;
+        };
+
+        const move = (e) => {
+            if (!isDown) return;
+
+            // Prevent default scrolling on mobile so the carousel moves instead
+            if (e.cancelable) e.preventDefault();
+
+            const x = (e.pageX || (e.touches ? e.touches[0].pageX : 0)) - container.offsetLeft;
+            const walk = (x - startX) * 1.2; // Drag sensitivity multiplier
+            let newTransform = currentTranslate + walk;
+
+            // The logic: 1/3 of the total width is one full set of items
+            const setWidth = container.scrollWidth / 3;
+
+            // --- THE TELEPORTATION LOGIC ---
+            // IF swipe too far RIGHT (reaching the start of the list)
+            if (newTransform > 0) {
+                newTransform -= setWidth;
+                currentTranslate -= setWidth;
+                startX = x;
+            }
+            // IF swipe too far LEFT (reaching the end of the cloned list)
+            else if (newTransform < -setWidth) {
+                newTransform += setWidth;
+                currentTranslate += setWidth;
+                startX = x;
+            }
+
+            container.style.transform = `translateX(${newTransform}px)`;
+        };
+
+        const end = () => {
+            if (!isDown) return;
+            isDown = false;
+            container.classList.remove('is-dragging');
+
+            // Reset the CSS animation so it picks up where the user left it.
+            // Make sure '40s' matches your CSS file speed!
+            container.style.animation = 'scroll 40s linear infinite';
+            container.style.transform = '';
+        };
+
+        // Desktop Event Listeners
+        container.addEventListener('mousedown', start);
+        window.addEventListener('mousemove', move);
+        window.addEventListener('mouseup', end);
+
+        // Mobile Event Listeners
+        container.addEventListener('touchstart', start, { passive: true });
+        window.addEventListener('touchmove', move, { passive: false });
+        window.addEventListener('touchend', end);
+    </script>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white-100">
-        <!-- Contact content -->
+    <section id="contact" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title">Contact Us</h2>
             <div class="text-center mb-16">
-                <p class="text-xl text-white-600 max-w-2xl mx-auto">
-                    Get in touch with our team to discuss your recruitment needs
+                <h2 class="text-3xl md:text-5xl font-bold text-red-700 text-center mb-12 tracking-wide">Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Get in touch with our team to discuss your recruitment needs and visa journey.
                 </p>
             </div>
 
-            <!-- Flex Container -->
-            <div class="md:flex gap-12">
-                <!-- Left Column -->
-                <!-- Wrapper for both columns -->
-                <div class="flex flex-col md:flex-row gap-6 items-stretch">
-                    <!-- Left Column -->
-                    <div class="md:w-1/2 flex flex-col">
-                        <div id="form-section"
-                            class="bg-black p-8 rounded-lg shadow-lg flex flex-col w-full h-full items-center justify-center text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div
+                    class="bg-black p-8 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center border-t-4 border-red-700">
+                    <h3 class="text-3xl font-bold text-white mb-6">Message Us</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        For inquiries or faster assistance, you may contact us through Messenger or fill out our
+                        <span class="text-red-400 font-semibold">Free Call Assessment Form</span>.
+                        Our visa consultant will reach out within 24 hours.
+                    </p>
 
-                            <h2 class="text-3xl font-bold text-red-800 mb-6">Message Us</h2>
+                    <div class="w-full max-w-sm space-y-4">
+                        <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                            class="flex items-center justify-center w-full bg-blue-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-blue-700 transition-all transform hover:-translate-y-1 shadow-lg">
+                            <i class="fab fa-facebook-messenger mr-3 text-xl"></i>
+                            Chat on Messenger
+                        </a>
 
-                            <p class="text-white mb-6">
-                                For inquiries or faster assistance, you may contact us through Messenger or fill out our
-                                Free Call Assessment Form. Our visa consultant will reach out within 24 hours to help
-                                guide you toward your goal of going abroad.
-                            </p>
-
-
-                            <!-- Button Wrapper (makes widths match) -->
-                            <div class="w-full max-w-[320px] flex flex-col items-center">
-
-                                <!-- Messenger Button -->
-                                <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                    class="inline-flex items-center justify-center w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 transition mb-4">
-                                    <i class="fab fa-facebook-messenger mr-2 text-lg"></i>
-                                    Message us on Messenger
-                                </a>
-
-                                <!-- Google Form Button -->
-                                <a href="https://shorturl.at/Oephz" target="_blank"
-                                    class="inline-flex items-center justify-center w-full bg-green-600 text-white py-3 px-6 rounded-md font-medium hover:bg-green-700 transition">
-                                    <i class="fab fa-google mr-2 text-lg"></i>
-                                    Fill out Google Form
-                                </a>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    
-                    <!-- Right Column -->
-                    <div class="md:w-1/2 flex flex-col">
-                        <div class="bg-black p-8 rounded-lg shadow-lg flex flex-col w-full h-full">
-                            <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                            <div class="flex-1">
-                                <div class="mb-6">
-                                    <!-- Office Address -->
-                                    <div class="flex items-start mb-4">
-                                        <span class="flex-shrink-0 mt-1 mr-3 text-red-600">
-                                            <i class="fas fa-map-marker-alt fa-lg"></i>
-                                        </span>
-                                        <div>
-                                            <span class="font-semibold text-white">Office Address</span>
-                                            <p class="text-white">
-                                                You may visit us at our office located at:<br />
-                                                2nd Floor, MC Premiere Building, Balintawak EDSA, Quezon City,
-                                                Philippines, 1181.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Office Hours -->
-                                    <div class="flex items-start mb-4">
-                                        <span class="flex-shrink-0 mt-1 mr-3 text-red-600">
-                                            <i class="fas fa-clock fa-lg"></i>
-                                        </span>
-                                        <div>
-                                            <span class="font-semibold text-white">Office Hours</span>
-                                            <p class="text-white">
-                                                We are open from 8:00 AM to 5:00 PM, Mondays to Fridays,<br />
-                                                and from 8:00 AM to 12:00 NN on Saturdays.<br />
-                                                Kindly let us know when and what time you plan to visit so we can
-                                                arrange the schedule accordingly.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- WhatsApp -->
-                                    <div class="flex items-start mb-4">
-                                        <span class="flex-shrink-0 mt-1 mr-3 text-red-600">
-                                            <i class="fab fa-whatsapp fa-lg"></i>
-                                        </span>
-                                        <div>
-                                            <span class="font-semibold text-white">WhatsApp</span>
-                                            <p class="text-white">+63953 460 0255</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Landline -->
-                                    <div class="flex items-start mb-4">
-                                        <span class="flex-shrink-0 mt-1 mr-3 text-red-600">
-                                            <i class="fas fa-phone fa-lg"></i>
-                                        </span>
-                                        <div>
-                                            <span class="font-semibold text-white">Landline</span>
-                                            <p class="text-white">(02) 8681 4497</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Email -->
-                                    <div class="flex items-start mb-4">
-                                        <span class="flex-shrink-0 mt-1 mr-3 text-red-600">
-                                            <i class="fas fa-envelope fa-lg"></i>
-                                        </span>
-                                        <div>
-                                            <span class="font-semibold text-white">Email</span>
-                                            <p class="text-white">bridgewayvisa@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex space-x-4 mt-4">
-                                <a href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
-                                    target="_blank" class="text-white hover:text-red-600" aria-label="Facebook">
-                                    <i class="fab fa-facebook-f text-xl"></i>
-                                </a>
-                                <a href="https://www.tiktok.com/@bridgewayvisa_" target="_blank"
-                                    class="text-white hover:text-red-600" aria-label="TikTok">
-                                    <i class="fab fa-tiktok text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <a href="https://shorturl.at/Oephz" target="_blank"
+                            class="flex items-center justify-center w-full bg-green-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-green-700 transition-all transform hover:-translate-y-1 shadow-lg">
+                            <i class="fab fa-google mr-3 text-xl"></i>
+                            Free Call Assessment
+                        </a>
                     </div>
                 </div>
 
+                <div class="bg-black p-8 rounded-2xl shadow-xl border-t-4 border-gray-100 flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-8 border-b border-gray-800 pb-4">Contact Information
+                    </h3>
 
+                    <div class="space-y-6 flex-1">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-700/20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Office
+                                    Address</span>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    2nd Floor, MC Premiere Building, Balintawak EDSA, <br>
+                                    Quezon City, Philippines, 1181.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-700/20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Office
+                                    Hours</span>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    <span class="text-white">Mon - Fri:</span> 8:00 AM – 5:00 PM<br />
+                                    <span class="text-white">Sat:</span> 8:00 AM – 12:00 NN
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-red-600 mr-4">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-white text-xs uppercase mb-1">WhatsApp</span>
+                                    <p class="text-gray-300 text-sm">+63953 460 0255</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 text-red-600 mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-white text-xs uppercase mb-1">Email</span>
+                                    <p class="text-gray-300 text-sm break-all">bridgewayvisa@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-10 pt-6 border-t border-gray-800">
+                        <a href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
+                            target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bridgewayvisa_" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition-colors text-white"
+                            aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2033481232814!2d121.00223707590807!3d14.644400475990263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b663b6555555%3A0x6b107e3a24147610!2sMC%20Premiere%20Building!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white-800 text-black py-12">
-        <!-- Footer content -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="flex flex-col text-white">
-                    <!-- Logo and Company Name -->
-                    <div class="flex items-center mb-2">
-                        <img src="logo.jpg" alt="BVTC Logo" class="w-12 h-12 rounded-full object-cover block" />
-                        <span class="ml-3 text-xl font-bold">
-                            Bridgeway Visa Travel Corporation
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div class="flex flex-col">
+                    <div class="flex items-center mb-6">
+                        <img src="logo.jpg" alt="BVTC Logo"
+                            class="w-12 h-12 rounded-full object-cover" />
+                        <span class="ml-3 text-xl font-bold text-white tracking-tight">
+                            Bridgeway Visa
                         </span>
                     </div>
-                    <!-- Tagline -->
-                    <p class="text-sm">
-                        Connecting the world's best talent with exceptional opportunities since 2025.
+                    <p class="text-sm leading-relaxed mb-6">
+                        Connecting the world's best talent with exceptional opportunities. Your trusted partner in
+                        global mobility and visa consulting.
                     </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
+                            target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bridgewayvisa_" target="_blank"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition-colors text-white"
+                            aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
                 </div>
 
-
                 <div>
-                    <h4 class="font-bold text-lg mb-4 text-white">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#office" class="text-white hover:text-red-500">Office</a></li>
-                        <li><a href="#services" class="text-white hover:text-red-500">Services</a></li>
-                        <li><a href="#consultants" class="text-white hover:text-red-500">Visa Consultants</a></li>
-                        <li><a href="#about" class="text-white hover:text-red-500">About</a></li>
-                        <li><a href="#partners" class="text-white hover:text-red-500">Partners</a></li>
-                        <li><a href="#contact" class="text-white hover:text-red-500">Contact</a></li>
+                    <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#about" class="hover:text-red-500 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Our Services</a></li>
+                        <li><a href="#featured-programs" class="hover:text-red-500 transition-colors">Featured
+                                Programs</a></li>
+                        <li><a href="#partners" class="hover:text-red-500 transition-colors">Global Partners</a></li>
+                        <li><a href="#contact" class="hover:text-red-500 transition-colors">Contact Support</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-4 text-white">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="text-white hover:text-red-500">Tourist Visa</a></li>
-                        <li><a href="#services" class="text-white hover:text-red-500">Student Visa</a></li>
-                        <li><a href="#services" class="text-white hover:text-red-500">Dependent Visa / Open Work
+                    <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6">Visa Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Student & Tourist Visa</a>
+                        </li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Skills Migration</a></li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Dependent / Open Work
                                 Permit</a></li>
-                        <li><a href="#services" class="text-white hover:text-red-500">Post Graduation Work Visa</a></li>
-                        <li><a href="#services" class="text-white hover:text-red-500">Residency & Citizenship</a></li>
-                        <li><a href="#services" class="text-white hover:text-red-500">Skills Migration</a></li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Post-Graduation Permits</a>
+                        </li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Citizenship & Residency</a>
+                        </li>
                     </ul>
                 </div>
 
-
+                <div>
+                    <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6">Ready to Start?</h4>
+                    <p class="text-sm mb-4">Book your free assessment today and take the first step toward your global
+                        future.</p>
+                    <a href="#contact"
+                        class="inline-block bg-red-700 text-white px-6 py-2 rounded font-bold text-sm hover:bg-red-800 transition-all shadow-lg">
+                        Free Assessment
+                    </a>
+                </div>
             </div>
 
-            <div class="border-t border-white-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-white text-sm mb-4 md:mb-0">© 2025 Bridgeway Visa Travel Corporation. All rights
-                    reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
-                        target="_blank" class="text-white hover:text-black" aria-label="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.tiktok.com/@bridgewayvisa_" target="_blank"
-                        class="text-white hover:text-red-600" aria-label="TikTok">
-                        <i class="fab fa-tiktok"
-                            style="font-size:1.5rem;width:1.5rem;height:1.5rem;display:inline-block;"></i>
-                    </a>
-                    <!-- Removed X (Twitter) and YouTube icons -->
+            <div
+                class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>© 2026 Bridgeway Visa Travel Corporation. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Cookie Policy</a>
                 </div>
             </div>
         </div>
@@ -1211,4 +1455,3 @@
 </body>
 
 </html>
-
