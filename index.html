@@ -312,16 +312,13 @@
     </section>
 
     <style>
-        /* 1. Seamless keyframes */
+        /* 1. Keyframes for smooth infinite horizontal scroll */
         @keyframes scroll {
             from {
                 transform: translateX(0);
             }
 
             to {
-                /* This moves exactly 1/3 of the total width. 
-           If you have 3 sets (A, B, C), this moves Set A out of view 
-           so Set B takes its place perfectly. */
                 transform: translateX(calc(-100% / 3));
             }
         }
@@ -330,7 +327,6 @@
             --scroll-speed: 30s;
             display: flex;
             flex-wrap: nowrap;
-            /* CRITICAL: Prevents cards from dropping to the next line */
             width: max-content;
             animation: scroll var(--scroll-speed) linear infinite;
             cursor: grab;
@@ -338,27 +334,21 @@
             will-change: transform;
         }
 
-        /* Standardize card size so the math stays perfect */
-        .partner-card {
-            flex: 0 0 auto;
-            /* Prevents cards from shrinking */
-            width: 320px;
-            /* Or whatever your preferred width is */
-        }
-
         .animate-infinite-scroll img {
             pointer-events: none;
             -webkit-user-drag: none;
         }
 
+        /* FEATURE: Stop animation on hover */
+        .animate-infinite-scroll:hover:not(.is-dragging) {
+            animation-play-state: paused;
+        }
+
+        /* Pause animation while dragging */
         .animate-infinite-scroll.is-dragging {
             animation-play-state: paused !important;
             cursor: grabbing;
-        }
-
-        /* Pause on hover only when not dragging */
-        .group:hover .animate-infinite-scroll:not(.is-dragging) {
-            animation-play-state: paused;
+            transition: none;
         }
     </style>
 
@@ -379,7 +369,7 @@
                 </div>
 
                 <div id="scrollContainer" class="animate-infinite-scroll flex gap-4 md:gap-8 py-4">
-
+                    <!-- All 8 Cards -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/continuingCareAssisstant.jpg"
@@ -390,15 +380,13 @@
                             </h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Start your career in healthcare and make a difference in the lives of others.
-                            </p>
+                                Start your career in healthcare and make a difference.</p>
                             <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 2 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/studyInGermany.jpg"
@@ -409,15 +397,13 @@
                             </h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Study and work in Germany without the burden of tuition fees.
-                            </p>
+                                Study and work in Germany without the burden of tuition fees.</p>
                             <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 3 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/studyInAustrillia.jpg"
@@ -427,15 +413,13 @@
                             <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Study in Australia</h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Unlock opportunities at top Australian universities and gain global exposure.
-                            </p>
+                                Unlock opportunities at top Australian universities and gain global exposure.</p>
                             <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 4 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/longtermResidencyPathwayNewZealand.jpg"
@@ -446,15 +430,13 @@
                             </h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Your long-term route to residency in the beautiful landscapes of NZ.
-                            </p>
+                                Your long-term route to residency in the beautiful landscapes of NZ.</p>
                             <a href="#"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 5 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/TravelToSpain.jpg"
@@ -464,15 +446,13 @@
                             <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Travel to Spain</h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Experience the vibrant culture, history, and beauty of Spain.
-                            </p>
+                                Experience the vibrant culture, history, and beauty of Spain.</p>
                             <a href="#"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 6 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/generalSkillMigrantVisa.jpg"
@@ -482,15 +462,13 @@
                             <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Skills Migration</h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Take the next step in your career abroad with skilled migration programs.
-                            </p>
+                                Take the next step in your career abroad with skilled migration programs.</p>
                             <a href="#"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 7 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/StudyInUnitedKingdom.jpg"
@@ -500,15 +478,13 @@
                             <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Study in the UK</h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Explore educational opportunities in top universities across the UK.
-                            </p>
+                                Explore educational opportunities in top universities across the UK.</p>
                             <a href="#"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
+                    <!-- Card 8 -->
                     <div
                         class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
                         <img src="featuredPrograms/studyAbroad.jpg"
@@ -518,20 +494,90 @@
                             <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Study Abroad Program</h4>
                             <p
                                 class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
-                                Open the door to global education experiences around the world.
-                            </p>
+                                Open the door to global education experiences around the world.</p>
                             <a href="#"
-                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">
-                                Message us
-                            </a>
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
                         </div>
                     </div>
-
-                    <div class="flex gap-4 md:gap-8" id="clone-target"></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        const container = document.querySelector('#scrollContainer');
+        const originalContent = container.innerHTML;
+
+        // Triple the content: [Set 1] [Set 2] [Set 3]
+        container.innerHTML = originalContent + originalContent + originalContent;
+
+        let isDown = false;
+        let startX;
+        let currentTranslate = 0;
+        const speed = 30;
+
+        function getTranslateX() {
+            const style = window.getComputedStyle(container);
+            const matrix = new WebKitCSSMatrix(style.transform);
+            return matrix.m41;
+        }
+
+        const start = (e) => {
+            isDown = true;
+            container.classList.add('is-dragging');
+
+            const currentX = getTranslateX();
+            container.style.animation = 'none';
+            container.style.transform = `translateX(${currentX}px)`;
+
+            startX = (e.pageX || e.touches[0].pageX);
+            currentTranslate = currentX;
+        };
+
+        const end = () => {
+            if (!isDown) return;
+            isDown = false;
+            container.classList.remove('is-dragging');
+
+            const finalX = getTranslateX();
+            const setWidth = container.scrollWidth / 3;
+
+            // Calculate progress within one set (0 to 1)
+            // We use modulo to ensure that no matter where you dragged it, 
+            // we resume from the logically equivalent spot in the infinite loop.
+            let progress = Math.abs(finalX % setWidth) / setWidth;
+            if (finalX > 0) progress = 1 - progress;
+
+            container.style.animation = `scroll ${speed}s linear infinite`;
+            container.style.animationDelay = `-${progress * speed}s`;
+            container.style.transform = '';
+        };
+
+        const move = (e) => {
+            if (!isDown) return;
+            const x = (e.pageX || e.touches[0].pageX);
+            const walk = (x - startX);
+
+            const newTransform = currentTranslate + walk;
+            const totalWidth = container.scrollWidth;
+            const visibleWidth = container.parentElement.offsetWidth;
+
+            // Constraint: Allow dragging to the absolute start (0) 
+            // or absolute end (totalWidth - visibleWidth)
+            if (newTransform <= 0 && newTransform >= -(totalWidth - visibleWidth)) {
+                container.style.transform = `translateX(${newTransform}px)`;
+            }
+        };
+
+        container.addEventListener('mousedown', start);
+        window.addEventListener('mousemove', move);
+        window.addEventListener('mouseup', end);
+
+        container.addEventListener('touchstart', start, { passive: true });
+        window.addEventListener('touchmove', move, { passive: false });
+        window.addEventListener('touchend', end);
+    </script>
 
     <!--About Us  -->
     <section id="about" class="scroll-mt-20 min-h-screen flex items-center bg-zinc-950 text-white py-12">
@@ -767,282 +813,312 @@
         </div>
     </section>
 
+    <!-- Styles Scoped for Partners Section -->
     <style>
-        @layer utilities {
-
-            /* 1. Seamless keyframes based on the tripled content */
-            @keyframes scroll {
-                from {
-                    transform: translateX(0);
-                }
-
-                to {
-                    /* Moves exactly one full set of cards out of view */
-                    transform: translateX(calc(-100% / 3));
-                }
+    @layer utilities {
+        /* Unique animation name to avoid conflicts with other sliders */
+        @keyframes partner-inf-scroll {
+            from {
+                transform: translateX(0);
             }
-
-            .animate-infinite-scroll {
-                /* ========================================== */
-                /* EDIT SPEED HERE: e.g., 10s (Fast) or 40s (Slow) */
-                --scroll-speed: 10s;
-                /* ========================================== */
-
-                display: flex;
-                flex-wrap: nowrap;
-                /* Ensures cards stay in one line */
-                width: max-content;
-                animation: scroll var(--scroll-speed) linear infinite;
-                cursor: grab;
-                user-select: none;
-                will-change: transform;
-            }
-
-            .partner-card {
-                flex: 0 0 320px;
-                /* Fixed width to keep math perfect */
-            }
-
-            .animate-infinite-scroll img {
-                pointer-events: none;
-                -webkit-user-drag: none;
-            }
-
-            .animate-infinite-scroll.is-dragging {
-                animation-play-state: paused !important;
-                cursor: grabbing;
-            }
-
-            /* Pause on hover only when not dragging */
-            .animate-infinite-scroll:hover:not(.is-dragging) {
-                animation-play-state: paused;
+            to {
+                transform: translateX(calc(-100% / 3));
             }
         }
 
-        .carousel-viewport {
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-            /* Edge fading effect */
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        .partners-scroll-container {
+            --partner-speed: 40s;
+            display: flex;
+            flex-wrap: nowrap;
+            /* Added stretch to ensure all cards match the height of the tallest one */
+            align-items: stretch; 
+            width: max-content;
+            animation: partner-inf-scroll var(--partner-speed) linear infinite;
+            cursor: grab;
+            user-select: none;
+            will-change: transform;
         }
-    </style>
 
-    <section id="partners" class="scroll-mt-13 py-20 bg-black overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
-                Our Partners
-            </h2>
-            <div class="text-center mb-12">
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                    We are proud to collaborate with leading organizations and clients worldwide.
-                </p>
-            </div>
+        .partner-card {
+            flex: 0 0 320px;
+            display: flex;
+            flex-direction: column;
+        }
 
-            <div class="carousel-viewport group">
-                <div id="scrollContainer" class="animate-infinite-scroll gap-8">
+        .partners-scroll-container img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
 
-                    <div class="flex gap-8 carousel-item-group">
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/skylineInternationalCollege.jpg" alt="Skyline Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Skyline International College</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Career-Focused Courses</p>
-                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                                    <li>Affordable Tuition</li>
-                                    <li>Online & On-Campus Options</li>
-                                    <li>Official Accreditation</li>
-                                    <li>Work Opportunities</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Skyline blends practical education with
-                                    affordability.</p>
-                            </div>
+        /* Pause state logic */
+        .partners-scroll-container:hover:not(.partner-is-dragging) {
+            animation-play-state: paused;
+        }
+
+        .partners-scroll-container.partner-is-dragging {
+            animation-play-state: paused !important;
+            cursor: grabbing;
+        }
+    }
+
+    .carousel-viewport {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+</style>
+
+<section id="partners" class="scroll-mt-13 py-20 bg-black overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
+            Our Partners
+        </h2>
+        <div class="text-center mb-12">
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                We are proud to collaborate with leading organizations and clients worldwide.
+            </p>
+        </div>
+
+        <div class="carousel-viewport group">
+            <div id="partnerScrollTrack" class="partners-scroll-container gap-8">
+                
+                <!-- Card 1 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/skylineInternationalCollege.jpg" alt="Skyline Logo" class="object-contain w-full h-full" />
                         </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/timesEducation.jpg" alt="Times Education Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Times Education</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Practical, career-oriented learning</p>
-                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                                    <li>Practical Training</li>
-                                    <li>Budget-Friendly Tuition</li>
-                                    <li>ASQA & CRICOS Accredited</li>
-                                    <li>Industry-Aligned Programs</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Delivers skills-focused learning with
-                                    flexibility.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/GoozingMigration.jpg" alt="Goozing Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Goozing Immigration</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Personalized visa assistance</p>
-                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                                    <li>Tailored Visa Assistance</li>
-                                    <li>Education Partnerships</li>
-                                    <li>Responsive Support</li>
-                                    <li>Migration Expertise</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Makes migration less stressful with guidance.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/canberraCollegeOfManagement&Technology.jpg" alt="CCMT Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Canberra College (CCMT)</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Business and tech disciplines</p>
-                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                                    <li>Specialized Programs</li>
-                                    <li>Local Accessibility</li>
-                                    <li>Hands-On Learning</li>
-                                    <li>Community Engagement</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Vocational learning rooted in real-world
-                                    experience.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/Adventus.io.jpg" alt="Adventus Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Adventus</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Global provider of ICT services</p>
-                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                                    <li>24/7 ICT support</li>
-                                    <li>Simplifies admissions</li>
-                                    <li>Strategic industry partnerships</li>
-                                    <li>Employee perks & healthcare</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Empowers institutions and students through
-                                    innovation.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/InternationalBusinessUniversity.jpg" alt="IBU Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">International Business University</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Innovative academic pathways</p>
-                                <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
-                                    <li>Digital transformation focus</li>
-                                    <li>Real-world application</li>
-                                    <li>Modern resources</li>
-                                    <li>Career-readiness programs</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Helping students grow via future-ready
-                                    education.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/GEEBEE.jpg" alt="Geebee Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Geebee Education</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">900+ international universities</p>
-                                <p class="text-gray-300 text-sm mb-2">Opportunities in the USA, Canada, Australia, UK,
-                                    and Europe.</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Supporting students in exploring global goals.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/TRENT.png" alt="TRENT Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">TRENT Global College</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">Practical Singapore-based programs</p>
-                                <p class="text-gray-300 text-sm mb-2">Short course durations with paid internships and
-                                    hands-on experience.</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Combines education with real-world Singapore
-                                    experience.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white h-full flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:border-red-300">
-                            <div>
-                                <div
-                                    class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                    <img src="ourPartners/FLEEMING.jpg" alt="Fleming Logo"
-                                        class="object-contain w-full h-full" />
-                                </div>
-                                <h4 class="text-lg font-bold text-white mb-1">Fleming College</h4>
-                                <p class="text-gray-300 text-sm italic mb-2">High-demand programs in Canada</p>
-                                <p class="text-gray-300 text-sm mb-2">Nursing, AI, and Caregiving with industry
-                                    placements.</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800">
-                                <p class="text-gray-400 italic text-sm">Preparing graduates for successful careers in
-                                    Canada.</p>
-                            </div>
-                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Skyline International College</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Career-Focused Courses</p>
+                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>Affordable Tuition</li>
+                            <li>Online & On-Campus Options</li>
+                            <li>Official Accreditation</li>
+                            <li>Work Opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Skyline blends practical education with affordability.</p>
                     </div>
                 </div>
+
+                <!-- Card 2 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/timesEducation.jpg" alt="Times Education Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Times Education</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Practical, career-oriented learning</p>
+                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>Practical Training</li>
+                            <li>Budget-Friendly Tuition</li>
+                            <li>ASQA & CRICOS Accredited</li>
+                            <li>Industry-Aligned Programs</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Delivers skills-focused learning with flexibility.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/GoozingMigration.jpg" alt="Goozing Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Goozing Immigration</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Personalized visa assistance</p>
+                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>Tailored Visa Assistance</li>
+                            <li>Education Partnerships</li>
+                            <li>Responsive Support</li>
+                            <li>Migration Expertise</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Makes migration less stressful with guidance.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/canberraCollegeOfManagement&Technology.jpg" alt="CCMT Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Canberra College (CCMT)</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Business and tech disciplines</p>
+                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>Specialized Programs</li>
+                            <li>Local Accessibility</li>
+                            <li>Hands-On Learning</li>
+                            <li>Community Engagement</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Vocational learning rooted in real-world experience.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/Adventus.io.jpg" alt="Adventus Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Adventus</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Global provider of ICT services</p>
+                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>24/7 ICT support</li>
+                            <li>Simplifies admissions</li>
+                            <li>Strategic industry partnerships</li>
+                            <li>Employee perks & healthcare</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Empowers institutions and students through innovation.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/InternationalBusinessUniversity.jpg" alt="IBU Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">International Business University</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Innovative academic pathways</p>
+                        <ul class="text-left text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>Digital transformation focus</li>
+                            <li>Real-world application</li>
+                            <li>Modern resources</li>
+                            <li>Career-readiness programs</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Helping students grow via future-ready education.</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/GEEBEE.jpg" alt="Geebee Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Geebee Education</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">900+ international universities</p>
+                        <p class="text-gray-300 text-sm mb-2">Opportunities in the USA, Canada, Australia, UK, and Europe.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Supporting students in exploring global goals.</p>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/TRENT.png" alt="TRENT Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">TRENT Global College</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">Practical Singapore-based programs</p>
+                        <p class="text-gray-300 text-sm mb-2">Short course durations with paid internships and hands-on experience.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Combines education with real-world Singapore experience.</p>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="partner-card bg-black p-8 rounded-xl shadow-lg border border-white transition-transform duration-300 hover:scale-105 hover:border-red-300">
+                    <div class="flex-grow">
+                        <div class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
+                            <img src="ourPartners/FLEEMING.jpg" alt="Fleming Logo" class="object-contain w-full h-full" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Fleming College</h4>
+                        <p class="text-gray-300 text-sm italic mb-2">High-demand programs in Canada</p>
+                        <p class="text-gray-300 text-sm mb-2">Nursing, AI, and Caregiving with industry placements.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <p class="text-gray-400 italic text-sm">Preparing graduates for successful careers in Canada.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    <script>
+        (function () {
+            const track = document.querySelector('#partnerScrollTrack');
+            const content = track.innerHTML;
+
+            // Triple the content for seamless infinite loop
+            track.innerHTML = content + content + content;
+
+            let isPartnerDragging = false;
+            let partnerStartX;
+            let partnerCurrentX = 0;
+
+            // Capture current translation position
+            const getPartnerX = () => {
+                const style = window.getComputedStyle(track);
+                const matrix = new WebKitCSSMatrix(style.transform);
+                return matrix.m41;
+            };
+
+            const onStart = (e) => {
+                isPartnerDragging = true;
+                track.classList.add('partner-is-dragging');
+
+                const x = getPartnerX();
+                track.style.animation = 'none';
+                track.style.transform = `translateX(${x}px)`;
+
+                partnerStartX = (e.pageX || e.touches[0].pageX);
+                partnerCurrentX = x;
+            };
+
+            const onMove = (e) => {
+                if (!isPartnerDragging) return;
+                const x = (e.pageX || e.touches[0].pageX);
+                const walk = (x - partnerStartX);
+                track.style.transform = `translateX(${partnerCurrentX + walk}px)`;
+            };
+
+            const onEnd = () => {
+                if (!isPartnerDragging) return;
+                isPartnerDragging = false;
+                track.classList.remove('partner-is-dragging');
+
+                const finalX = getPartnerX();
+                const setWidth = track.scrollWidth / 3;
+                const speed = parseFloat(getComputedStyle(track).getPropertyValue('--partner-speed'));
+
+                // Calculate current progress to sync animation back up
+                let progress = Math.abs(finalX % setWidth) / setWidth;
+                if (finalX > 0) progress = 1 - progress;
+
+                track.style.animation = `partner-inf-scroll ${speed}s linear infinite`;
+                track.style.animationDelay = `-${progress * speed}s`;
+                track.style.transform = '';
+            };
+
+            // Bind events
+            track.addEventListener('mousedown', onStart);
+            window.addEventListener('mousemove', onMove);
+            window.addEventListener('mouseup', onEnd);
+            track.addEventListener('touchstart', onStart, { passive: true });
+            window.addEventListener('touchmove', onMove, { passive: false });
+            window.addEventListener('touchend', onEnd);
+        })();
+    </script>
 
     <!-- Contact Section -->
     <section id="contact" class="scroll-mt-14 py-20 bg-gray-50">
@@ -1255,9 +1331,9 @@
     <script src="js/form.js"></script> -->
     <script src="js/main.js"></script>
     <script src="js/office_slider.js"></script>
-    <script src="js/FP_carousel.js"></script>
+    <!-- <script src="js/FP_carousel.js"></script> -->
     <script src="js/ServicesAndFoundation_accordion.js"></script>
-    <script src="js/partners_carousel.js"></script>
+    <!-- <script src="js/partners_carousel.js"></script> -->
 </body>
 
 </html>
