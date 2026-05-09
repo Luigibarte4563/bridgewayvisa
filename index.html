@@ -196,70 +196,105 @@
         </div>
     </section>
 
-    <!-- Office Section -->
-    <section id="office" class="scroll-mt-15 min-h-screen flex items-center bg-[#000000] py-20 animate-fade-in">
+    <section id="office" class="scroll-mt-18 min-h-screen flex items-center bg-black py-20 animate-fade-in">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-            <h2
-                class="mt-12 md:mt-15 text-3xl md:text-4xl font-bold text-red-700 text-center mb-8 md:mb-12 tracking-wide">
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
                 Our Office
             </h2>
 
-            <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-                <div class="md:w-1/2 w-full flex flex-col items-center">
-                    <div class="relative w-full max-w-md overflow-hidden rounded-lg shadow-lg group">
+                <div class="lg:w-1/2 w-full flex flex-col items-center">
+                    <div
+                        class="relative w-full max-w-lg overflow-hidden rounded-2xl shadow-2xl group border border-white/10 bg-zinc-900">
                         <div id="slider" class="flex transition-transform duration-500 ease-in-out">
                             <img src="ourOffice/outsideOfTheOffice.jpg" alt="Outside Office"
-                                class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                                class="w-full h-64 md:h-96 object-cover flex-shrink-0">
                             <img src="ourOffice/lobbyOfOffice.jpg" alt="The Office"
-                                class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                                class="w-full h-64 md:h-96 object-cover flex-shrink-0">
                             <img src="ourOffice/theOffice.jpg" alt="Lobby"
-                                class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                                class="w-full h-64 md:h-96 object-cover flex-shrink-0">
                         </div>
 
                         <button onclick="moveSlide(-1)"
-                            class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700 focus:outline-none">
                             &#10094;
                         </button>
                         <button onclick="moveSlide(1)"
-                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700 focus:outline-none">
                             &#10095;
                         </button>
                     </div>
 
-                    <div class="flex gap-2 mt-6">
-                        <div class="dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 w-6"
+                    <div class="flex gap-3 mt-8">
+                        <div class="dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 w-8"
                             onclick="currentSlide(0)"></div>
-                        <div class="dot w-3 h-3 rounded-full bg-gray-600 cursor-pointer transition-all duration-300"
+                        <div class="dot w-3 h-3 rounded-full bg-zinc-700 cursor-pointer transition-all duration-300 hover:bg-red-400"
                             onclick="currentSlide(1)"></div>
-                        <div class="dot w-3 h-3 rounded-full bg-gray-600 cursor-pointer transition-all duration-300"
+                        <div class="dot w-3 h-3 rounded-full bg-zinc-700 cursor-pointer transition-all duration-300 hover:bg-red-400"
                             onclick="currentSlide(2)"></div>
                     </div>
                 </div>
 
-                <div class="md:w-1/2">
-                    <p class="text-gray-200 text-lg mb-6 leading-relaxed">
-                        <span class="text-[#DC143C] font-semibold">Bridgeway Visa Travel Corporation</span> offers a
-                        welcoming and professional office ambiance that reflects its commitment to quality service.
-                        The space is well-organized, with a clean and modern layout that puts clients at ease the moment
-                        they walk in.
-                    </p>
+                <div class="lg:w-1/2 space-y-6">
+                    <div class="space-y-4 text-gray-400 leading-relaxed text-sm md:text-base">
+                        <p>
+                            <span class="text-white font-medium">Bridgeway Visa Travel Corporation</span> offers a
+                            welcoming and professional office ambiance that reflects our commitment to quality service.
+                            The space is meticulously organized, featuring a clean and modern layout designed to put you
+                            at ease.
+                        </p>
+                        <p>
+                            Our team provides a warm, efficient environment perfect for detailed travel consultations
+                            and secure visa processing, ensuring every client feels supported throughout their journey.
+                        </p>
+                    </div>
 
-                    <p class="text-gray-200 text-lg mb-8 leading-relaxed">
-                        Staff are approachable and attentive, creating a warm and efficient environment perfect for
-                        travel consultations and visa processing.
-                    </p>
-
-                    <a href="#contact"
-                        class="inline-block text-[#DC143C] border-2 border-[#DC143C] px-8 py-3 rounded-md font-bold hover:bg-[#DC143C] hover:text-white transition duration-300">
-                        Contact Us
-                    </a>
+                    <div class="pt-6">
+                        <a href="#contact"
+                            class="inline-block bg-transparent text-red-600 border-2 border-red-700 px-10 py-3 rounded-xl font-bold hover:bg-red-700 hover:text-white transition duration-300 shadow-lg hover:shadow-red-900/20 active:scale-95">
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
+
+    <script>
+        let slideIndex = 0;
+        const slider = document.getElementById('slider');
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            // Move images
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            // Update dots styling
+            dots.forEach((dot, index) => {
+                if (index === slideIndex) {
+                    dot.classList.add('bg-red-700', 'w-8');
+                    dot.classList.remove('bg-zinc-700', 'w-3');
+                } else {
+                    dot.classList.remove('bg-red-700', 'w-8');
+                    dot.classList.add('bg-zinc-700', 'w-3');
+                }
+            });
+        }
+
+        function moveSlide(n) {
+            slideIndex += n;
+            if (slideIndex >= dots.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = dots.length - 1;
+            updateSlider();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            updateSlider();
+        }
+    </script>
 
     <!-- Services -->
     <section id="services" class="scroll-mt-20 min-h-screen flex items-center bg-white py-20">
