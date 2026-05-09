@@ -1,0 +1,267 @@
+<style>
+        /* 1. Keyframes for smooth infinite horizontal scroll */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(-100% / 3));
+            }
+        }
+
+        .animate-infinite-scroll {
+            --scroll-speed: 30s;
+            display: flex;
+            flex-wrap: nowrap;
+            width: max-content;
+            animation: scroll var(--scroll-speed) linear infinite;
+            cursor: grab;
+            user-select: none;
+            will-change: transform;
+        }
+
+        .animate-infinite-scroll img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+
+        /* FEATURE: Stop animation on hover */
+        .animate-infinite-scroll:hover:not(.is-dragging) {
+            animation-play-state: paused;
+        }
+
+        /* Pause animation while dragging */
+        .animate-infinite-scroll.is-dragging {
+            animation-play-state: paused !important;
+            cursor: grabbing;
+            transition: none;
+        }
+    </style>
+
+    <section id="featured-programs"
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+            <h2 class="text-3xl md:mt-15 md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
+                Featured Programs
+            </h2>
+
+            <div class="relative group overflow-hidden">
+                <div
+                    class="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-zinc-950 to-transparent z-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-zinc-950 to-transparent z-10 pointer-events-none">
+                </div>
+
+                <div id="scrollContainer" class="animate-infinite-scroll flex gap-4 md:gap-8 py-4">
+                    <!-- All 8 Cards -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/continuingCareAssisstant.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Continuing Care Assistant
+                            </h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Start your career in healthcare and make a difference.</p>
+                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/studyInGermany.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Free Tuition in Germany
+                            </h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Study and work in Germany without the burden of tuition fees.</p>
+                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/studyInAustrillia.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Study in Australia</h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Unlock opportunities at top Australian universities and gain global exposure.</p>
+                            <a href="https://www.facebook.com/messages/t/61570211881355" target="_blank"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/longtermResidencyPathwayNewZealand.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">New Zealand Residency
+                            </h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Your long-term route to residency in the beautiful landscapes of NZ.</p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/TravelToSpain.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Travel to Spain</h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Experience the vibrant culture, history, and beauty of Spain.</p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/generalSkillMigrantVisa.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Skills Migration</h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Take the next step in your career abroad with skilled migration programs.</p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/StudyInUnitedKingdom.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Study in the UK</h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Explore educational opportunities in top universities across the UK.</p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl overflow-hidden w-[240px] xs:w-[280px] md:w-[320px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500">
+                        <img src="featuredPrograms/studyAbroad.jpg"
+                            class="w-full h-full object-cover transition duration-700 group-hover/card:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
+                            <h4 class="font-bold text-base md:text-xl text-white mb-2 md:mb-3">Study Abroad Program</h4>
+                            <p
+                                class="text-gray-300 text-[10px] md:text-sm mb-4 md:mb-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 delay-100">
+                                Open the door to global education experiences around the world.</p>
+                            <a href="#"
+                                class="bg-red-700 hover:bg-red-600 text-white text-center py-2 md:py-3 rounded-xl font-bold text-sm md:text-base transition-colors">Message
+                                us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const container = document.querySelector('#scrollContainer');
+        const originalContent = container.innerHTML;
+
+        // Triple the content: [Set 1] [Set 2] [Set 3]
+        container.innerHTML = originalContent + originalContent + originalContent;
+
+        let isDown = false;
+        let startX;
+        let currentTranslate = 0;
+        const speed = 30;
+
+        function getTranslateX() {
+            const style = window.getComputedStyle(container);
+            const matrix = new WebKitCSSMatrix(style.transform);
+            return matrix.m41;
+        }
+
+        const start = (e) => {
+            isDown = true;
+            container.classList.add('is-dragging');
+
+            const currentX = getTranslateX();
+            container.style.animation = 'none';
+            container.style.transform = `translateX(${currentX}px)`;
+
+            startX = (e.pageX || e.touches[0].pageX);
+            currentTranslate = currentX;
+        };
+
+        const end = () => {
+            if (!isDown) return;
+            isDown = false;
+            container.classList.remove('is-dragging');
+
+            const finalX = getTranslateX();
+            const setWidth = container.scrollWidth / 3;
+
+            // Calculate progress within one set (0 to 1)
+            // We use modulo to ensure that no matter where you dragged it, 
+            // we resume from the logically equivalent spot in the infinite loop.
+            let progress = Math.abs(finalX % setWidth) / setWidth;
+            if (finalX > 0) progress = 1 - progress;
+
+            container.style.animation = `scroll ${speed}s linear infinite`;
+            container.style.animationDelay = `-${progress * speed}s`;
+            container.style.transform = '';
+        };
+
+        const move = (e) => {
+            if (!isDown) return;
+            const x = (e.pageX || e.touches[0].pageX);
+            const walk = (x - startX);
+
+            const newTransform = currentTranslate + walk;
+            const totalWidth = container.scrollWidth;
+            const visibleWidth = container.parentElement.offsetWidth;
+
+            // Constraint: Allow dragging to the absolute start (0) 
+            // or absolute end (totalWidth - visibleWidth)
+            if (newTransform <= 0 && newTransform >= -(totalWidth - visibleWidth)) {
+                container.style.transform = `translateX(${newTransform}px)`;
+            }
+        };
+
+        container.addEventListener('mousedown', start);
+        window.addEventListener('mousemove', move);
+        window.addEventListener('mouseup', end);
+
+        container.addEventListener('touchstart', start, { passive: true });
+        window.addEventListener('touchmove', move, { passive: false });
+        window.addEventListener('touchend', end);
+    </script>
