@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -41,6 +42,7 @@
                     </div>
                 </a>
 
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="#about"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">About</a>
@@ -52,6 +54,8 @@
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Featured</a>
                     <a href="#our-foundation"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Foundation</a>
+                    <a href="#testimonial"
+                        class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Testimonials</a>
                     <a href="#partners"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Partners</a>
                     <a href="#payment"
@@ -62,6 +66,7 @@
                     </a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button"
                         class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none">
@@ -75,6 +80,7 @@
             </div>
         </div>
 
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
             <div class="px-4 py-6 space-y-2">
                 <a href="#about"
@@ -84,11 +90,11 @@
                 <a href="#services"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Services</a>
                 <a href="#featured-programs"
-                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Featured
-                    Programs</a>
+                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Featured Programs</a>
                 <a href="#our-foundation"
-                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Our
-                    Foundation</a>
+                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Our Foundation</a>
+                <a href="#testimonial"
+                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Testimonials</a>
                 <a href="#partners"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Partners</a>
                 <a href="#payment"
@@ -702,6 +708,358 @@
         window.addEventListener('touchmove', move, { passive: false });
         window.addEventListener('touchend', end);
     </script>
+
+
+    <section id="testimonial"
+    class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
+
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zinc-800/20 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-4 tracking-wide">
+            Testimonials
+        </h2>
+
+        <div class="w-full relative px-4 md:px-12">
+
+            <div class="swiper premium-swiper w-full overflow-visible py-8">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide premium-card-slide">
+                        <div class="card-inner-wrapper">
+                            <div class="video-container">
+                                <div id="player1"></div>
+                            </div>
+                            <div class="card-overlay-content">
+                                <h3 class="text-lg md:text-xl font-bold text-white mb-1">Global Pathway Success</h3>
+                                <p class="text-zinc-300 text-xs md:text-sm">Achieved international residency milestones smoothly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide premium-card-slide">
+                        <div class="card-inner-wrapper">
+                            <div class="video-container">
+                                <div id="player2"></div>
+                            </div>
+                            <div class="card-overlay-content">
+                                <h3 class="text-lg md:text-xl font-bold text-white mb-1">Germany Free Tuition Journey</h3>
+                                <p class="text-zinc-300 text-xs md:text-sm">Transitioned to European student and professional life.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide premium-card-slide">
+                        <div class="card-inner-wrapper">
+                            <div class="video-container">
+                                <div id="player3"></div>
+                            </div>
+                            <div class="card-overlay-content">
+                                <h3 class="text-lg md:text-xl font-bold text-white mb-1">Australia Student Experience</h3>
+                                <p class="text-zinc-300 text-xs md:text-sm">Gained invaluable global exposure at top universities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide premium-card-slide">
+                        <div class="card-inner-wrapper">
+                            <div class="video-container">
+                                <div id="player4"></div>
+                            </div>
+                            <div class="card-overlay-content">
+                                <h3 class="text-lg md:text-xl font-bold text-white mb-1">Skills Migration Accomplished</h3>
+                                <p class="text-zinc-300 text-xs md:text-sm">Secured long-term visa status abroad via skilled work.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="swiper-nav-btn swiper-prev-btn group" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="swiper-nav-btn swiper-next-btn group" aria-label="Next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+        </div>
+
+        <div class="swiper-premium-pagination flex justify-center items-center gap-2 mt-8"></div>
+
+    </div>
+</section>
+
+<style>
+    /* Structural adjustments for the active slide focus effect */
+    .premium-swiper {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Fixed dimensional bounds for consistent scale-shifting geometry */
+    .premium-card-slide {
+        width: 300px !important;
+        height: 420px !important;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        will-change: transform, filter, opacity;
+        position: relative;
+    }
+
+    @media (min-width: 768px) {
+        .premium-card-slide {
+            width: 460px !important;
+            height: 520px !important;
+        }
+    }
+
+    /* Outer Wrapper for Glassmorphism Frame styling */
+    .card-inner-wrapper {
+        width: 100%;
+        height: 100%;
+        background: rgba(24, 24, 27, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
+        transition: box-shadow 0.5s ease;
+    }
+
+    /* Video Frame Container */
+    .video-container {
+        width: 100%;
+        height: 70%;
+        background: #000;
+        position: relative;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        object-fit: cover;
+    }
+
+    /* Card Typography Tray */
+    .card-overlay-content {
+        width: 100%;
+        height: 30%;
+        padding: 1.25rem;
+        background: linear-gradient(to top, #09090b 80%, rgba(9, 9, 11, 0.95));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: background 0.5s ease;
+    }
+
+    @media (min-width: 768px) {
+        .card-overlay-content {
+            padding: 1.5rem 2rem;
+        }
+    }
+
+    /* INACTIVE SLIDES (DEFAULT UNFOCUSED STATE) */
+    .premium-card-slide {
+        opacity: 0.5;
+        filter: blur(4px);
+    }
+
+    /* Pure Cinematic Shield Cover to intercept iframe interaction on inactive slides */
+    .premium-card-slide::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 20;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 24px;
+        transition: all 0.5s ease;
+        pointer-events: auto; /* Blocks clicks so drag works on inactive cards */
+    }
+
+    /* ACTIVE CENTER CARD (PREMIUM FOCUS STATE) */
+    .premium-card-slide.swiper-slide-active {
+        opacity: 1 !important;
+        filter: blur(0px) !important;
+        transform: scale(1.06) !important;
+        z-index: 30;
+    }
+
+    .premium-card-slide.swiper-slide-active .card-inner-wrapper {
+        box-shadow: 0 25px 50px -12px rgba(185, 28, 28, 0.25), 0 0 40px -5px rgba(0, 0, 0, 0.8);
+        border-color: rgba(185, 28, 28, 0.2);
+    }
+
+    /* Remove the pointer blocking click-shield on the active slide to make it playable */
+    .premium-card-slide.swiper-slide-active::after {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* CUSTOM NAVIGATION BUTTONS */
+    .swiper-nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        background: rgba(24, 24, 27, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 40;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(8px);
+    }
+
+    .swiper-nav-btn:hover {
+        background: #b91c1c;
+        border-color: #ef4444;
+        box-shadow: 0 0 20px rgba(185, 28, 28, 0.5);
+    }
+
+    .swiper-prev-btn { left: -10px; }
+    .swiper-next-btn { right: -10px; }
+
+    @media (min-width: 1024px) {
+        .swiper-prev-btn { left: -25px; }
+        .swiper-next-btn { right: -25px; }
+    }
+
+    /* CUSTOM PAGINATION DOTS */
+    .swiper-premium-pagination .swiper-pagination-bullet {
+        width: 24px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 9999px;
+        opacity: 1;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+
+    .swiper-premium-pagination .swiper-pagination-bullet-active {
+        background: #b91c1c !important;
+        width: 48px;
+        box-shadow: 0 0 10px rgba(185, 28, 28, 0.6);
+    }
+</style>
+
+<script>
+    const players = [];
+    const videoConfigs = [
+        { id: 'player1', videoId: 'Rz5pXuiAylI' },
+        { id: 'player2', videoId: 'obXcRl02mVI' },
+        { id: 'player3', videoId: '8IkvNpzb5n8' },
+        { id: 'player4', videoId: 'vjacYSnoXJY' }
+    ];
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Swiper Instance
+        const swiper = new Swiper('.premium-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0, 
+            speed: 600, 
+            simulateTouch: false,   
+            allowTouchMove: false,  
+            watchSlidesProgress: true,
+            autoplay: false,
+
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 0,           
+                stretch: -40,         
+                depth: 160,           
+                modifier: 1,          
+                slideShadows: false,  
+            },
+
+            navigation: {
+                nextEl: '.swiper-next-btn',
+                prevEl: '.swiper-prev-btn',
+            },
+
+            pagination: {
+                el: '.swiper-premium-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            on: {
+                // Intercept slide transition mechanics to strip all running playing states
+                slideChange: function () {
+                    pauseAllVideos();
+                }
+            }
+        });
+    });
+
+    // Load YouTube Player API Script Asynchronously
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function onYouTubeIframeAPIReady() {
+        videoConfigs.forEach(config => {
+            const player = new YT.Player(config.id, {
+                videoId: config.videoId,
+                playerVars: {
+                    'autoplay': 0, 
+                    'controls': 1, 
+                    'modestbranding': 1,
+                    'rel': 0
+                },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        // If slide video initializes playback (State Code 1), auto-pause alternate targets
+        if (event.data === YT.PlayerState.PLAYING) {
+            const currentTarget = event.target;
+            players.forEach(player => {
+                if (player && player !== currentTarget && typeof player.pauseVideo === 'function') {
+                    player.pauseVideo();
+                }
+            });
+        }
+    }
+
+    function pauseAllVideos() {
+        players.forEach(player => {
+            if (player && typeof player.pauseVideo === 'function') {
+                player.pauseVideo();
+            }
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <section id="our-foundation"
         class="scroll-mt-18 min-h-screen w-full bg-black text-white flex flex-col justify-center py-16 md:py-24">
