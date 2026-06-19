@@ -42,7 +42,6 @@
                     </div>
                 </a>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="#about"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">About</a>
@@ -54,6 +53,9 @@
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Featured</a>
                     <a href="#our-foundation"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Foundation</a>
+                    <a href="#organization-chart"
+                        class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Org
+                        Chart</a>
                     <a href="#testimonial"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Testimonials</a>
                     <a href="#partners"
@@ -66,7 +68,6 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button"
                         class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none">
@@ -80,7 +81,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
             <div class="px-4 py-6 space-y-2">
                 <a href="#about"
@@ -95,6 +95,9 @@
                 <a href="#our-foundation"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Our
                     Foundation</a>
+                <a href="#organization-chart"
+                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Org
+                    Chart</a>
                 <a href="#testimonial"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Testimonials</a>
                 <a href="#partners"
@@ -463,6 +466,9 @@
         }
     </style>
 
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
     <section id="featured-programs"
         class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -615,6 +621,10 @@
             </div>
         </div>
     </section>
+
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
 
     <script>
         const container = document.querySelector('#scrollContainer');
@@ -828,6 +838,261 @@
         </div>
     </section>
 
+    <!-- Team -->
+    <section id="organization-chart"
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
+
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zinc-800/20 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10">
+
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-2 tracking-wide uppercase">
+                Organization Chart
+            </h2>s
+
+            <div class="w-full bg-zinc-900/40 border border-zinc-800/80 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm p-4 group relative cursor-pointer"
+                onclick="openOrgChartModal()">
+
+                <div
+                    class="w-full aspect-[2/1] relative flex items-center justify-center overflow-hidden rounded-lg bg-zinc-950">
+                    <img src="Team/ORGANIZATION CHART FINAL VERSION.png" alt="Organization Chart Final Version"
+                        class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                        loading="lazy" />
+
+                    <div
+                        class="absolute inset-0 bg-zinc-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                        <div
+                            class="bg-red-700 hover:bg-red-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.603 10.601zM10.5 7.5v6m3-3h-6" />
+                            </svg>
+                            View Full Picture
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex items-center gap-4 mt-4 text-xs text-zinc-500">
+                <span class="w-1 h-1 rounded-full bg-zinc-700"></span>
+                <span>Click graphic canvas to expand interactive workspace</span>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="org-chart-modal"
+        class="fixed inset-0 z-50 invisible opacity-0 bg-zinc-950/95 backdrop-blur-md transition-all duration-300 flex flex-col p-4 md:p-8 select-none"
+        role="dialog" aria-modal="true">
+
+        <div class="w-full flex justify-between items-center mb-4 max-w-7xl mx-auto px-4">
+            <div>
+                <h3 class="text-lg font-bold text-white">Organization Chart</h3>
+                <p class="text-xs text-zinc-400">Master Canvas (14400 × 7200 px) • Drag to pan / Pinch or Scroll to zoom
+                </p>
+            </div>
+            <button onclick="closeOrgChartModal()"
+                class="bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 p-2 rounded-lg transition-colors z-50"
+                aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="modal-viewport"
+            class="flex-1 w-full max-w-7xl mx-auto border border-zinc-800/60 bg-zinc-950 rounded-xl overflow-hidden relative cursor-grab active:cursor-grabbing touch-none">
+
+            <div
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 bg-zinc-900/90 border border-zinc-800 backdrop-blur-md px-4 py-2 rounded-xl flex items-center gap-3 shadow-2xl pointer-events-auto">
+                <button onclick="adjustZoom(-0.25)"
+                    class="p-1.5 hover:bg-zinc-800 text-zinc-400 hover:text-white rounded-lg transition-colors"
+                    title="Zoom Out">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                </button>
+
+                <span id="zoom-indicator"
+                    class="text-xs font-mono font-bold text-zinc-300 min-w-[50px] text-center">100%</span>
+
+                <button onclick="adjustZoom(0.25)"
+                    class="p-1.5 hover:bg-zinc-800 text-zinc-400 hover:text-white rounded-lg transition-colors"
+                    title="Zoom In">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                </button>
+                <div class="w-px h-4 bg-zinc-800 mx-0.5"></div>
+                <button onclick="resetZoom()"
+                    class="text-xs font-medium text-zinc-400 hover:text-red-500 px-2 py-1 hover:bg-zinc-800/50 rounded-md transition-colors">
+                    Reset
+                </button>
+            </div>
+
+            <div id="modal-transform-layer"
+                class="w-full h-full absolute inset-0 flex items-center justify-center will-change-transform origin-center">
+                <div class="w-[90vw] max-w-[1200px] aspect-[2/1] relative">
+                    <img src="Team/ORGANIZATION CHART FINAL VERSION.png" alt="Organization Chart High Res View"
+                        class="w-full h-full object-contain pointer-events-none select-none" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const viewport = document.getElementById('modal-viewport');
+        const transformLayer = document.getElementById('modal-transform-layer');
+        const indicator = document.getElementById('zoom-indicator');
+
+        let scale = 1.0;
+        let panX = 0;
+        let panY = 0;
+
+        const minScale = 0.4;
+        const maxScale = 6.0;
+
+        // Track active interactions across multiple pointers
+        let activePointers = [];
+        let isDragging = false;
+        let startXX = 0, startY = 0;
+        let initialPanX = 0, initialPanY = 0;
+        let initialPinchDistance = 0;
+        let initialScale = 1.0;
+
+        function openOrgChartModal() {
+            const modal = document.getElementById('org-chart-modal');
+            modal.classList.remove('invisible', 'opacity-0');
+            document.body.style.overflow = 'hidden';
+            resetZoom();
+            setupGestureListeners();
+        }
+
+        function closeOrgChartModal() {
+            const modal = document.getElementById('org-chart-modal');
+            modal.classList.add('invisible', 'opacity-0');
+            document.body.style.overflow = '';
+            teardownGestureListeners();
+        }
+
+        function updateTransform() {
+            transformLayer.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${scale})`;
+            indicator.textContent = `${Math.round(scale * 100)}%`;
+        }
+
+        function adjustZoom(amount) {
+            scale = Math.min(Math.max(scale + amount, minScale), maxScale);
+            updateTransform();
+        }
+
+        function resetZoom() {
+            scale = 1.0;
+            panX = 0;
+            panY = 0;
+            updateTransform();
+        }
+
+        // Unified Engine Interaction Hooks
+        function onPointerDown(e) {
+            if (e.target.closest('button')) return; // Ignore control buttons clicks
+            activePointers.push(e);
+            viewport.setPointerCapture(e.pointerId);
+
+            if (activePointers.length === 1) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initialPanX = panX;
+                initialPanY = panY;
+            } else if (activePointers.length === 2) {
+                isDragging = false; // Shift logic priority from Panning over to Pinch mechanics
+                initialScale = scale;
+                initialPinchDistance = getDistance(activePointers[0], activePointers[1]);
+            }
+        }
+
+        function onPointerMove(e) {
+            const index = activePointers.findIndex(p => p.pointerId === e.pointerId);
+            if (index === -1) return;
+            activePointers[index] = e;
+
+            if (isDragging && activePointers.length === 1) {
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                panX = initialPanX + dx;
+                panY = initialPanY + dy;
+                updateTransform();
+            } else if (activePointers.length === 2) {
+                const currentDistance = getDistance(activePointers[0], activePointers[1]);
+                if (initialPinchDistance > 0) {
+                    const factor = currentDistance / initialPinchDistance;
+                    scale = Math.min(Math.max(initialScale * factor, minScale), maxScale);
+                    updateTransform();
+                }
+            }
+        }
+
+        function onPointerUp(e) {
+            activePointers = activePointers.filter(p => p.pointerId !== e.pointerId);
+            if (activePointers.length < 2) initialPinchDistance = 0;
+
+            if (activePointers.length === 0) {
+                isDragging = false;
+            } else if (activePointers.length === 1) {
+                // Smooth passback to running drag math cleanly
+                isDragging = true;
+                startX = activePointers[0].clientX;
+                startY = activePointers[0].clientY;
+                initialPanX = panX;
+                initialPanY = panY;
+            }
+        }
+
+        function handleWheelZoom(e) {
+            e.preventDefault();
+            const zoomFactor = 0.12;
+            const delta = e.deltaY < 0 ? 1 : -1;
+            scale = Math.min(Math.max(scale + (delta * zoomFactor), minScale), maxScale);
+            updateTransform();
+        }
+
+        function getDistance(p1, p2) {
+            const dx = p1.clientX - p2.clientX;
+            const dy = p1.clientY - p2.clientY;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        function setupGestureListeners() {
+            viewport.addEventListener('pointerdown', onPointerDown);
+            viewport.addEventListener('pointermove', onPointerMove);
+            viewport.addEventListener('pointerup', onPointerUp);
+            viewport.addEventListener('pointercancel', onPointerUp);
+            viewport.addEventListener('wheel', handleWheelZoom, { passive: false });
+        }
+
+        function teardownGestureListeners() {
+            viewport.removeEventListener('pointerdown', onPointerDown);
+            viewport.removeEventListener('pointermove', onPointerMove);
+            viewport.removeEventListener('pointerup', onPointerUp);
+            viewport.removeEventListener('pointercancel', onPointerUp);
+            viewport.removeEventListener('wheel', handleWheelZoom);
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeOrgChartModal();
+        });
+    </script>
+
     <section id="testimonial"
         class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
 
@@ -868,7 +1133,8 @@
                                     <div id="player2"></div>
                                 </div>
                                 <div class="card-overlay-content">
-                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Germany Free Tuition Journey</h3>
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Germany Free Tuition
+                                        Journey</h3>
                                     <p class="text-zinc-300 text-xs md:text-sm">Transitioned to European student and
                                         professional life.</p>
                                 </div>
@@ -881,7 +1147,8 @@
                                     <div id="player3"></div>
                                 </div>
                                 <div class="card-overlay-content">
-                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Australia Student Experience</h3>
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Australia Student
+                                        Experience</h3>
                                     <p class="text-zinc-300 text-xs md:text-sm">Gained invaluable global exposure at top
                                         universities.</p>
                                 </div>
@@ -894,7 +1161,8 @@
                                     <div id="player4"></div>
                                 </div>
                                 <div class="card-overlay-content">
-                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Skills Migration Accomplished</h3>
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Skills Migration
+                                        Accomplished</h3>
                                     <p class="text-zinc-300 text-xs md:text-sm">Secured long-term visa status abroad via
                                         skilled work.</p>
                                 </div>
@@ -909,7 +1177,8 @@
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Success Story Five</h3>
-                                    <p class="text-zinc-300 text-xs md:text-sm">Custom description for your new international journey testimonial.</p>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Custom description for your new
+                                        international journey testimonial.</p>
                                 </div>
                             </div>
                         </div>
@@ -922,7 +1191,8 @@
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Success Story Six</h3>
-                                    <p class="text-zinc-300 text-xs md:text-sm">Custom description for your new international journey testimonial.</p>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Custom description for your new
+                                        international journey testimonial.</p>
                                 </div>
                             </div>
                         </div>
@@ -1225,6 +1495,532 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Testimonial Pictures -->
+
+    <section id="user-reviews-testimonial"
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
+
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zinc-800/20 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-4 tracking-wide">
+                Testimonials
+            </h2>
+
+            <div class="w-full relative px-4 md:px-12">
+
+                <div class="swiper user-reviews-swiper w-full overflow-visible py-8">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/ANICA AGUIRAN.png" alt="Anica Aguiran"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Anica Aguiran</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Global Pathway Success Story</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/BEHAGAN ADELA.png" alt="Behagan Adela"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Behagan Adela</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">International Journey Milestone</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/BEHMAN MANTILLA.png" alt="Behman Mantilla"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Behman Mantilla</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Pathway Accomplished Smoothly</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/BERNABE MANTILLA.png" alt="Bernabe Mantilla"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Bernabe Mantilla</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Visa Visa Approval Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/CARLOS AND AGUIRAN FAMILY.png"
+                                        alt="Carlos and Aguiran Family"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Carlos & Aguiran Family
+                                    </h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Family Migration Milestone</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/ERLINDA MANTILLA.png" alt="Erlinda Mantilla"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Erlinda Mantilla</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Successful Program Transition</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/GEMMILEX CARLOS.png" alt="Gemmilex Carlos"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Gemmilex Carlos</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Gained Invaluable Exposure</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/HANZEN VELARDE APPROVED VISIT VISA.png" alt="Hanzen Velarde"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Hanzen Velarde</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Approved Visit Visa</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/JELLICA SAN JOSE.png" alt="Jellica San Jose"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Jellica San Jose</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Student Experience Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/KAESLY NICOLE.png" alt="Kaesly Nicole"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Kaesly Nicole</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">International Milestone Journey</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/MANTILLA FAMILY.png" alt="Mantilla Family"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Mantilla Family</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Secured Long-term Family Status</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/MR. AGUIRAN.png" alt="Mr. Aguiran"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Mr. Aguiran</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Accomplished Global Transition</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/MS. PAGUIO MARTICIO.png" alt="Ms. Paguio Marticio"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Ms. Paguio Marticio</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Professional Pathway Achieved</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/NORMAN CORDON US VISA.png" alt="Norman Cordon"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Norman Cordon</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Approved US Visa Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/RONALD AGUIRAN.png" alt="Ronald Aguiran"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Ronald Aguiran</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Skills Migration Success Story</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/ROSIE BEJER US VISA.png" alt="Rosie Bejer"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Rosie Bejer</h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Approved US Visa Accomplished</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/SANTIAGO FAMILY (MR. ALVIN SANTIAGO).png"
+                                        alt="Santiago Family"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Santiago Family (Mr. Alvin)
+                                    </h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Relocation & Residency Success</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/SANTIAGO FAMILY 2.png" alt="Santiago Family 2"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Santiago Family Part II
+                                    </h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Global Career Development</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/SANTIAGO FAMILY 3.png" alt="Santiago Family 3"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Santiago Family Part III
+                                    </h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">New Horizons Secured</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide user-reviews-card-slide">
+                            <div class="user-reviews-inner-wrapper">
+                                <div class="user-reviews-media-box">
+                                    <img src="Testimonials/SANTIAGO FAMILY4.png" alt="Santiago Family 4"
+                                        class="w-full h-full object-cover lg:object-contain lg:p-2">
+                                </div>
+                                <div class="user-reviews-text-tray">
+                                    <h3 class="text-lg md:text-xl font-bold text-white mb-1">Santiago Family Part IV
+                                    </h3>
+                                    <p class="text-zinc-300 text-xs md:text-sm">Complete Family Relocation Journey</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="user-reviews-nav-btn user-reviews-prev-btn group" aria-label="Previous slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button class="user-reviews-nav-btn user-reviews-next-btn group" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <div class="user-reviews-premium-pagination flex justify-center items-center gap-2 mt-8"></div>
+
+        </div>
+    </section>
+
+    <style>
+        /* Structural adjustments for the active slide focus effect */
+        .user-reviews-swiper {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        /* Fixed dimensional bounds for consistent scale-shifting geometry */
+        .user-reviews-card-slide {
+            width: 300px !important;
+            height: 420px !important;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            will-change: transform, filter, opacity;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .user-reviews-card-slide {
+                width: 460px !important;
+                height: 520px !important;
+            }
+        }
+
+        /* Outer Wrapper for Glassmorphism Frame styling */
+        .user-reviews-inner-wrapper {
+            width: 100%;
+            height: 100%;
+            background: rgba(24, 24, 27, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
+            transition: box-shadow 0.5s ease;
+        }
+
+        /* Image Frame Container */
+        .user-reviews-media-box {
+            width: 100%;
+            height: 70%;
+            background: #000;
+            position: relative;
+        }
+
+        /* Card Typography Tray */
+        .user-reviews-text-tray {
+            width: 100%;
+            height: 30%;
+            padding: 1.25rem;
+            background: linear-gradient(to top, #09090b 80%, rgba(9, 9, 11, 0.95));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: background 0.5s ease;
+        }
+
+        @media (min-width: 768px) {
+            .user-reviews-text-tray {
+                padding: 1.5rem 2rem;
+            }
+        }
+
+        /* INACTIVE SLIDES (DEFAULT UNFOCUSED STATE) */
+        .user-reviews-card-slide {
+            opacity: 0.5;
+            filter: blur(4px);
+        }
+
+        /* Shield Cover to intercept layout interaction on inactive slides */
+        .user-reviews-card-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 20;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 24px;
+            transition: all 0.5s ease;
+            pointer-events: auto;
+        }
+
+        /* ACTIVE CENTER CARD (PREMIUM FOCUS STATE) */
+        .user-reviews-card-slide.swiper-slide-active {
+            opacity: 1 !important;
+            filter: blur(0px) !important;
+            transform: scale(1.06) !important;
+            z-index: 30;
+        }
+
+        .user-reviews-card-slide.swiper-slide-active .user-reviews-inner-wrapper {
+            box-shadow: 0 25px 50px -12px rgba(185, 28, 28, 0.25), 0 0 40px -5px rgba(0, 0, 0, 0.8);
+            border-color: rgba(185, 28, 28, 0.2);
+        }
+
+        /* Remove shield on active slide */
+        .user-reviews-card-slide.swiper-slide-active::after {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* CUSTOM NAVIGATION BUTTONS */
+        .user-reviews-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(24, 24, 27, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 40;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px);
+        }
+
+        .user-reviews-nav-btn:hover {
+            background: #b91c1c;
+            border-color: #ef4444;
+            box-shadow: 0 0 20px rgba(185, 28, 28, 0.5);
+        }
+
+        .user-reviews-prev-btn {
+            left: -10px;
+        }
+
+        .user-reviews-next-btn {
+            right: -10px;
+        }
+
+        @media (min-width: 1024px) {
+            .user-reviews-prev-btn {
+                left: -25px;
+            }
+
+            .user-reviews-next-btn {
+                right: -25px;
+            }
+        }
+
+        /* CUSTOM PAGINATION DOTS */
+        .user-reviews-premium-pagination .swiper-pagination-bullet {
+            width: 24px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            opacity: 1;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .user-reviews-premium-pagination .swiper-pagination-bullet-active {
+            background: #b91c1c !important;
+            width: 48px;
+            box-shadow: 0 0 10px rgba(185, 28, 28, 0.6);
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        (function () {
+            document.addEventListener("DOMContentLoaded", function () {
+                // Initialize Scoped Swiper Instance for Image Cards
+                const reviewSliderInstance = new Swiper('.user-reviews-swiper', {
+                    direction: 'horizontal',
+                    loop: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                    speed: 600,
+                    simulateTouch: true,
+                    allowTouchMove: true,
+                    watchSlidesProgress: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: true,
+                    },
+
+                    effect: 'coverflow',
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: -40,
+                        depth: 160,
+                        modifier: 1,
+                        slideShadows: false,
+                    },
+
+                    navigation: {
+                        nextEl: '.user-reviews-next-btn',
+                        prevEl: '.user-reviews-prev-btn',
+                    },
+
+                    pagination: {
+                        el: '.user-reviews-premium-pagination',
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span class="' + className + '"></span>';
+                        },
+                    },
+
+                    keyboard: {
+                        enabled: true,
+                        onlyInViewport: true,
+                    }
+                });
+            });
+        })();
+    </script>
 
     <!-- Styles Scoped for Partners Section -->
     <style>
