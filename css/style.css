@@ -1,11 +1,16 @@
 :root {
-    --primary: #000000;
-    --secondary: #1a1a1a;
+    /* Tailwind Zinc Palette Shades */
+    --primary: #09090b;       /* zinc-950 (Deepest dark background) */
+    --secondary: #18181b;     /* zinc-900 (Slightly lighter dark for headers/sections) */
+    --section-bg: #18181b;    /* zinc-900 */
+    --card-bg: #27272a;       /* zinc-800 (Card backgrounds that pop out) */
+    
+    /* Text Colors */
+    --text-primary: #fafafa;   /* zinc-50  (Crisp white) */
+    --text-secondary: #d4d4d8; /* zinc-300 (Muted gray text) */
+    
+    /* Accent (Kept your striking red accent) */
     --accent: #ff0000;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --card-bg: #1e1e1e;
-    --section-bg: #121212;
 }
 
 body {

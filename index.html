@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="logo.ico">
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -207,8 +206,12 @@
         </div>
     </section>
 
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
+
     <section id="office"
-        class="scroll-mt-20 h-auto w-full bg-zinc-950 text-white flex flex-col justify-center py-16 md:py-24 animate-fade-in">
+        class="scroll-mt-20 h-auto w-full bg-zinc-950 text-white flex flex-col justify-center py-16 md:py-24 animate-fade-in border-t border-white/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
             <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
@@ -308,8 +311,71 @@
         }
     </script>
 
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
+
+    <section id="location"
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative border-t border-white/5">
+
+        <!-- Ambient Glow Effects -->
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zinc-800/20 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
+                Our Office Location
+            </h2>
+
+            <!-- Centered Card Container Wrapper -->
+            <div class="w-full flex justify-center px-4 md:px-12 relative z-10">
+
+                <!-- Head Office Card -->
+                <div
+                    class="w-full max-w-2xl bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden backdrop-blur-sm flex flex-col justify-between shadow-2xl">
+                    <div>
+                        <!-- Video Container -->
+                        <div class="w-full aspect-video bg-zinc-950 relative group">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/wEIEQHbxhp8"
+                                title="Bridgeway Visa Travel Corporation Main Office Location" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="p-6 md:p-8">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="px-2.5 py-1 text-xs font-semibold bg-red-950 text-red-400 rounded-md border border-red-900/30">
+                                    Head Office
+                                </span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Manila Headquarters</h3>
+                            <p class="text-zinc-400 text-sm md:text-base leading-relaxed mb-4">
+                                GM Floor, MC Premiere Building, Balintawak, EDSA, Quezon City, Philippines.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
+
     <!-- Services -->
-    <section id="services" class="scroll-mt-20 min-h-screen flex items-center bg-white py-20">
+    <section id="services"
+        class="scroll-mt-20 min-h-screen flex items-center bg-zinc-950 py-20 text-white border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
             <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
@@ -317,20 +383,21 @@
             </h2>
 
             <div id="services-accordion" class="space-y-4">
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <!-- Service item 1 -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="tourist">
                         <span>TOURIST VISA</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-200">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 Tourist visas are non-immigrant visas granted to persons who want to enter a certain
                                 country temporarily for business, leisure, or a combination of both. The duration of
                                 your stay depends on the Embassy Consul's approval.
@@ -339,20 +406,21 @@
                     </div>
                 </div>
 
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <!-- Service item 2 -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="student">
                         <span>STUDENT VISA</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-200">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 A student visa allows foreign students to stay in their preferred country for the
                                 duration of their studies. Students must first be enrolled in a qualified institution.
                             </p>
@@ -360,20 +428,21 @@
                     </div>
                 </div>
 
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <!-- Service item 3 -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="dependent">
                         <span>DEPENDENT VISA / OPEN WORK PERMIT</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-200">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 This visa allows dependents of legal residents or citizens to enter and remain in a
                                 country. The sponsor (resident) is responsible for initiating the application.
                             </p>
@@ -381,20 +450,21 @@
                     </div>
                 </div>
 
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <!-- Service item 4 -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="postgrad">
                         <span>POST GRADUATION WORK VISA</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-200">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 This visa is granted to international students who have completed studies at a
                                 recognized institution. It allows them to work for a set period.
                             </p>
@@ -402,20 +472,21 @@
                     </div>
                 </div>
 
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <!-- Service item 5 -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="residency">
                         <span>RESIDENCY & CITIZENSHIP</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-200">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 Our Residency and Citizenship program offers a step-by-step solution for individuals
                                 to obtain legal residency and eventually full citizenship.
                             </p>
@@ -470,8 +541,9 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
+
     <section id="featured-programs"
-        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 md:py-24">
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 md:py-24 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
             <h2 class="text-3xl md:mt-15 md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
@@ -623,10 +695,6 @@
         </div>
     </section>
 
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
-    </div>
-
     <script>
         const container = document.querySelector('#scrollContainer');
         const originalContent = container.innerHTML;
@@ -701,8 +769,11 @@
         window.addEventListener('touchend', end);
     </script>
 
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
     <section id="our-foundation"
-        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white flex flex-col justify-center py-16 md:py-24">
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white flex flex-col justify-center py-16 md:py-24 border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
             <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
@@ -711,20 +782,21 @@
 
             <div id="about-accordion" class="space-y-4">
 
-                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                <!-- Mission Item -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="mission">
                         <span>OUR MISSION</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-300 text-lg">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 To deliver <span class="text-white font-medium">ethical, accurate, and
                                     professional</span> visa processing services that empower individuals and families
                                 to pursue global opportunities with confidence and trust.
@@ -733,20 +805,21 @@
                     </div>
                 </div>
 
-                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                <!-- Vision Item -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="vision">
                         <span>OUR VISION</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
-                            <p class="leading-relaxed text-gray-300 text-lg">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
+                            <p class="leading-relaxed text-sm">
                                 To be a <span class="text-white font-medium">globally respected</span> visa and travel
                                 corporation recognized for integrity, excellence, and meaningful impact connecting
                                 people to opportunities beyond borders.
@@ -755,48 +828,49 @@
                     </div>
                 </div>
 
-                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                <!-- Core Values Item -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="values">
                         <span>OUR CORE VALUES</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                                 <div>
-                                    <h4 class="text-red-600 font-bold mb-1">Integrity</h4>
-                                    <p class="text-sm text-gray-400">We act with honesty, transparency, and ethical
+                                    <h4 class="text-red-700 font-bold mb-1">Integrity</h4>
+                                    <p class="text-sm text-zinc-400">We act with honesty, transparency, and ethical
                                         responsibility in every decision and interaction.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-red-600 font-bold mb-1">Excellence</h4>
-                                    <p class="text-sm text-gray-400">We commit to accuracy, continuous learning, and
+                                    <h4 class="text-red-700 font-bold mb-1">Excellence</h4>
+                                    <p class="text-sm text-zinc-400">We commit to accuracy, continuous learning, and
                                         consistently high standards of professional services.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-red-600 font-bold mb-1">Client-Centered Responsibility</h4>
-                                    <p class="text-sm text-gray-400">We respect the trust our clients place in us and
+                                    <h4 class="text-red-700 font-bold mb-1">Client-Centered Responsibility</h4>
+                                    <p class="text-sm text-zinc-400">We respect the trust our clients place in us and
                                         treat every application with care, diligence, and accountability.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-red-600 font-bold mb-1">Teamwork and Respect</h4>
-                                    <p class="text-sm text-gray-400">We foster a professional environment built on
+                                    <h4 class="text-red-700 font-bold mb-1">Teamwork and Respect</h4>
+                                    <p class="text-sm text-zinc-400">We foster a professional environment built on
                                         collaboration, mutual respect, and shared success.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-red-600 font-bold mb-1">Accountability</h4>
-                                    <p class="text-sm text-gray-400">We take ownership of our work, uphold our
+                                    <h4 class="text-red-700 font-bold mb-1">Accountability</h4>
+                                    <p class="text-sm text-zinc-400">We take ownership of our work, uphold our
                                         commitments, and address challenges with responsibility and integrity.</p>
                                 </div>
                                 <div>
-                                    <h4 class="text-red-600 font-bold mb-1">Global Perspective</h4>
-                                    <p class="text-sm text-gray-400">We value diversity, cultural understanding, and
+                                    <h4 class="text-red-700 font-bold mb-1">Global Perspective</h4>
+                                    <p class="text-sm text-zinc-400">We value diversity, cultural understanding, and
                                         international awareness in the work we do.</p>
                                 </div>
                             </div>
@@ -804,31 +878,32 @@
                     </div>
                 </div>
 
-                <div class="border border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black">
+                <!-- Compliance Item -->
+                <div class="border border-zinc-900 rounded-xl overflow-hidden shadow-xl">
                     <button type="button"
-                        class="w-full flex justify-between items-center px-6 py-5 bg-red-50 hover:bg-red-100 focus:outline-none transition font-semibold text-red-700 text-lg accordion-btn cursor-pointer"
+                        class="w-full flex justify-between items-center px-6 py-5 bg-zinc-900 hover:bg-zinc-800 focus:outline-none transition font-semibold text-white text-lg accordion-btn cursor-pointer border-l-4 border-l-red-700"
                         data-accordion="compliance">
                         <span>COMMITMENT AND COMPLIANCE</span>
-                        <svg class="w-5 h-5 accordion-icon transition-transform duration-300 pointer-events-none"
+                        <svg class="w-5 h-5 accordion-icon text-zinc-400 transition-transform duration-300 pointer-events-none"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div
-                        class="accordion-content bg-black text-white transition-all duration-300 max-h-0 overflow-hidden">
-                        <div class="px-6 py-8 space-y-4">
-                            <p class="leading-relaxed text-gray-300">
+                        class="accordion-content bg-zinc-900/40 text-zinc-300 transition-all duration-300 max-h-0 overflow-hidden">
+                        <div class="px-6 py-8 border-t border-zinc-900 space-y-4">
+                            <p class="leading-relaxed text-sm">
                                 At Bridgeway Visa Travel Corporation, we uphold the highest standards of
                                 professionalism, transparency, and regulatory compliance.
                             </p>
-                            <ul class="list-none space-y-2 text-gray-300">
-                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span> Legally
+                            <ul class="list-none space-y-2 text-zinc-400 text-sm">
+                                <li class="flex items-start"><span class="mr-2 text-red-700 font-bold">•</span> Legally
                                     registered with SEC, BIR, LOCATION CLEARANCE, and MAYOR'S PERMIT (2026).</li>
-                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span> Upholds
+                                <li class="flex items-start"><span class="mr-2 text-red-700 font-bold">•</span> Upholds
                                     ethical standards and consumer protection laws.</li>
-                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span>
+                                <li class="flex items-start"><span class="mr-2 text-red-700 font-bold">•</span>
                                     Continuously trains staff for quality visa and travel service.</li>
-                                <li class="flex items-start"><span class="mr-2 text-red-600 font-bold">•</span> Provides
+                                <li class="flex items-start"><span class="mr-2 text-red-700 font-bold">•</span> Provides
                                     accurate, transparent, and responsive support.</li>
                             </ul>
                         </div>
@@ -842,10 +917,9 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
-
     <!-- Team -->
     <section id="organization-chart"
-        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative border-t border-white/5">
 
         <div
             class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
@@ -892,10 +966,6 @@
 
         </div>
     </section>
-
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
-    </div>
 
     <div id="org-chart-modal"
         class="fixed inset-0 z-50 invisible opacity-0 bg-zinc-950/95 backdrop-blur-md transition-all duration-300 flex flex-col p-4 md:p-8 select-none"
@@ -1102,8 +1172,12 @@
         });
     </script>
 
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
+
     <section id="testimonial"
-        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative border-t border-white/5">
 
         <div
             class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
@@ -1119,14 +1193,13 @@
             </h2>
 
             <div class="w-full relative px-4 md:px-12">
-
                 <div class="swiper premium-swiper w-full overflow-visible py-8">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide premium-card-slide">
+                        <div class="swiper-slide premium-card-slide" data-video-id="Rz5pXuiAylI">
                             <div class="card-inner-wrapper">
                                 <div class="video-container">
-                                    <div id="player1"></div>
+                                    <div class="video-player-backend"></div>
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Global Pathway Success</h3>
@@ -1136,10 +1209,10 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide premium-card-slide">
+                        <div class="swiper-slide premium-card-slide" data-video-id="obXcRl02mVI">
                             <div class="card-inner-wrapper">
                                 <div class="video-container">
-                                    <div id="player2"></div>
+                                    <div class="video-player-backend"></div>
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Germany Free Tuition
@@ -1150,10 +1223,10 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide premium-card-slide">
+                        <div class="swiper-slide premium-card-slide" data-video-id="8IkvNpzb5n8">
                             <div class="card-inner-wrapper">
                                 <div class="video-container">
-                                    <div id="player3"></div>
+                                    <div class="video-player-backend"></div>
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Australia Student
@@ -1164,10 +1237,10 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide premium-card-slide">
+                        <div class="swiper-slide premium-card-slide" data-video-id="vjacYSnoXJY">
                             <div class="card-inner-wrapper">
                                 <div class="video-container">
-                                    <div id="player4"></div>
+                                    <div class="video-player-backend"></div>
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Skills Migration
@@ -1178,11 +1251,10 @@
                             </div>
                         </div>
 
-                        <!-- Added New Slide 5 -->
-                        <div class="swiper-slide premium-card-slide">
+                        <div class="swiper-slide premium-card-slide" data-video-id="otAK1u4xzQc">
                             <div class="card-inner-wrapper">
                                 <div class="video-container">
-                                    <div id="player5"></div>
+                                    <div class="video-player-backend"></div>
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Success Story Five</h3>
@@ -1192,11 +1264,10 @@
                             </div>
                         </div>
 
-                        <!-- Added New Slide 6 -->
-                        <div class="swiper-slide premium-card-slide">
+                        <div class="swiper-slide premium-card-slide" data-video-id="QVWR7USvTKA">
                             <div class="card-inner-wrapper">
                                 <div class="video-container">
-                                    <div id="player6"></div>
+                                    <div class="video-player-backend"></div>
                                 </div>
                                 <div class="card-overlay-content">
                                     <h3 class="text-lg md:text-xl font-bold text-white mb-1">Success Story Six</h3>
@@ -1221,26 +1292,24 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </button>
-
             </div>
 
-            <div class="swiper-premium-pagination flex justify-center items-center gap-2 mt-8"></div>
-
+            <div
+                class=" w-24 swiper-premium-pagination text-zinc-400 font-mono text-sm md:text-base font-semibold tracking-widest mt-8">
+            </div>
         </div>
     </section>
 
     <style>
-        /* Structural adjustments for the active slide focus effect */
         .premium-swiper {
             padding-left: 0 !important;
             padding-right: 0 !important;
         }
 
-        /* Fixed dimensional bounds for consistent scale-shifting geometry */
         .premium-card-slide {
             width: 300px !important;
             height: 420px !important;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease, filter 0.5s ease !important;
             will-change: transform, filter, opacity;
             position: relative;
         }
@@ -1252,7 +1321,6 @@
             }
         }
 
-        /* Outer Wrapper for Glassmorphism Frame styling */
         .card-inner-wrapper {
             width: 100%;
             height: 100%;
@@ -1264,25 +1332,23 @@
             flex-direction: column;
             position: relative;
             box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
-            transition: box-shadow 0.5s ease;
         }
 
-        /* Video Frame Container */
         .video-container {
             width: 100%;
             height: 70%;
             background: #000;
             position: relative;
+            z-index: 10;
         }
 
-        .video-container iframe {
+        .video-container iframe,
+        .video-player-backend {
             width: 100%;
             height: 100%;
             border: 0;
-            object-fit: cover;
         }
 
-        /* Card Typography Tray */
         .card-overlay-content {
             width: 100%;
             height: 30%;
@@ -1291,7 +1357,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            transition: background 0.5s ease;
+            z-index: 25;
         }
 
         @media (min-width: 768px) {
@@ -1300,26 +1366,23 @@
             }
         }
 
-        /* INACTIVE SLIDES (DEFAULT UNFOCUSED STATE) */
+        /* INACTIVE SLIDES */
         .premium-card-slide {
             opacity: 0.5;
             filter: blur(4px);
         }
 
-        /* Pure Cinematic Shield Cover to intercept iframe interaction on inactive slides */
-        .premium-card-slide::after {
+        .premium-card-slide .video-container::after {
             content: '';
             position: absolute;
             inset: 0;
             z-index: 20;
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 24px;
+            background: rgba(0, 0, 0, 0.2);
             transition: all 0.5s ease;
             pointer-events: auto;
-            /* Blocks clicks so drag works on inactive cards */
         }
 
-        /* ACTIVE CENTER CARD (PREMIUM FOCUS STATE) */
+        /* ACTIVE CENTER CARD FOCUS STATE */
         .premium-card-slide.swiper-slide-active {
             opacity: 1 !important;
             filter: blur(0px) !important;
@@ -1332,13 +1395,12 @@
             border-color: rgba(185, 28, 28, 0.2);
         }
 
-        /* Remove the pointer blocking click-shield on the active slide to make it playable */
-        .premium-card-slide.swiper-slide-active::after {
+        .premium-card-slide.swiper-slide-active .video-container::after {
             opacity: 0;
             pointer-events: none;
         }
 
-        /* CUSTOM NAVIGATION BUTTONS */
+        /* NAV BUTTONS */
         .swiper-nav-btn {
             position: absolute;
             top: 50%;
@@ -1381,137 +1443,150 @@
             }
         }
 
-        /* CUSTOM PAGINATION DOTS */
-        .swiper-premium-pagination .swiper-pagination-bullet {
-            width: 24px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.2);
+        /* PREMIUM FRACTION PAGINATION STYLING */
+        .swiper-premium-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            background: rgba(24, 24, 27, 0.6);
+            padding: 6px 16px;
             border-radius: 9999px;
-            opacity: 1;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
 
-        .swiper-premium-pagination .swiper-pagination-bullet-active {
-            background: #b91c1c !important;
-            width: 48px;
-            box-shadow: 0 0 10px rgba(185, 28, 28, 0.6);
+        /* Styling targets for Swiper generated fraction classes */
+        .swiper-premium-pagination .swiper-pagination-current {
+            color: #ef4444;
+            /* Highlighting active slide number in Red */
+            font-weight: 700;
+        }
+
+        .swiper-premium-pagination .swiper-pagination-total {
+            color: #a1a1aa;
         }
     </style>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const players = [];
-        const videoConfigs = [
-            { id: 'player1', videoId: 'Rz5pXuiAylI' },
-            { id: 'player2', videoId: 'obXcRl02mVI' },
-            { id: 'player3', videoId: '8IkvNpzb5n8' },
-            { id: 'player4', videoId: 'vjacYSnoXJY' },
-            { id: 'player5', videoId: 'otAK1u4xzQc' }, // Link 1 added here
-            { id: 'player6', videoId: 'QVWR7USvTKA' }  // Link 2 added here
-        ];
+        let playersMap = new Map();
+        let swiperInstance = null;
 
-        document.addEventListener("DOMContentLoaded", function () {
-            // Initialize Swiper Instance
-            const swiper = new Swiper('.premium-swiper', {
+        if (!window.YT) {
+            const tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            const firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+
+        function onYouTubeIframeAPIReady() {
+            initializeSliderWithPlayers();
+        }
+
+        function initializeSliderWithPlayers() {
+            swiperInstance = new Swiper('.premium-swiper', {
                 direction: 'horizontal',
                 loop: true,
                 centeredSlides: true,
                 slidesPerView: 'auto',
                 spaceBetween: 0,
-                speed: 600,
+                speed: 500,
                 simulateTouch: false,
                 allowTouchMove: false,
                 watchSlidesProgress: true,
-                autoplay: false,
-
-                effect: 'coverflow',
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: -40,
-                    depth: 160,
-                    modifier: 1,
-                    slideShadows: false,
-                },
-
                 navigation: {
                     nextEl: '.swiper-next-btn',
                     prevEl: '.swiper-prev-btn',
                 },
-
+                // Switched over to fraction logic
                 pagination: {
                     el: '.swiper-premium-pagination',
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                        return '<span class="' + className + '"></span>';
-                    },
+                    type: 'fraction'
                 },
-
                 keyboard: {
                     enabled: true,
                     onlyInViewport: true,
                 },
                 on: {
-                    // Intercept slide transition mechanics to strip all running playing states
-                    slideChange: function () {
-                        pauseAllVideos();
+                    init: function () {
+                        buildPlayersForVisibleSlides(this);
+                    },
+                    slideChangeTransitionStart: function () {
+                        pauseAllActivePlayers();
+                    },
+                    slideChangeTransitionEnd: function () {
+                        buildPlayersForVisibleSlides(this);
                     }
                 }
             });
-        });
+        }
 
-        // Load YouTube Player API Script Asynchronously
-        const tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        function buildPlayersForVisibleSlides(swiper) {
+            swiper.slides.forEach((slide) => {
+                const videoId = slide.getAttribute('data-video-id');
+                const targetPlaceholder = slide.querySelector('.video-player-backend');
 
-        function onYouTubeIframeAPIReady() {
-            videoConfigs.forEach(config => {
-                const player = new YT.Player(config.id, {
-                    videoId: config.videoId,
-                    playerVars: {
-                        'autoplay': 0,
-                        'controls': 1,
-                        'modestbranding': 1,
-                        'rel': 0
-                    },
-                    events: {
-                        'onStateChange': onPlayerStateChange
-                    }
-                });
-                players.push(player);
+                if (targetPlaceholder && !targetPlaceholder.hasAttribute('data-player-bound')) {
+                    const uniquePlayerId = 'yt-' + Math.random().toString(36).substr(2, 9);
+                    targetPlaceholder.id = uniquePlayerId;
+                    targetPlaceholder.setAttribute('data-player-bound', 'true');
+
+                    const player = new YT.Player(uniquePlayerId, {
+                        videoId: videoId,
+                        playerVars: {
+                            'autoplay': 0,
+                            'controls': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'origin': window.location.origin
+                        },
+                        events: {
+                            'onStateChange': (event) => {
+                                if (event.data === YT.PlayerState.PLAYING) {
+                                    autoPauseMutedPlayers(event.target);
+                                }
+                            }
+                        }
+                    });
+                    playersMap.set(uniquePlayerId, player);
+                }
             });
         }
 
-        function onPlayerStateChange(event) {
-            // If slide video initializes playback (State Code 1), auto-pause alternate targets
-            if (event.data === YT.PlayerState.PLAYING) {
-                const currentTarget = event.target;
-                players.forEach(player => {
-                    if (player && player !== currentTarget && typeof player.pauseVideo === 'function') {
-                        player.pauseVideo();
-                    }
-                });
-            }
+        function autoPauseMutedPlayers(currentActivePlayer) {
+            playersMap.forEach((player) => {
+                if (player && player !== currentActivePlayer && typeof player.pauseVideo === 'function') {
+                    try {
+                        const state = player.getPlayerState();
+                        if (state === YT.PlayerState.PLAYING) {
+                            player.pauseVideo();
+                        }
+                    } catch (e) { }
+                }
+            });
         }
 
-        function pauseAllVideos() {
-            players.forEach(player => {
+        function pauseAllActivePlayers() {
+            playersMap.forEach((player) => {
                 if (player && typeof player.pauseVideo === 'function') {
-                    player.pauseVideo();
+                    try {
+                        const state = player.getPlayerState();
+                        if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) {
+                            player.pauseVideo();
+                        }
+                    } catch (e) { }
                 }
             });
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <!-- Testimonial Pictures -->
     <div class="max-w-6xl mx-auto px-4">
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
-    <!-- Testimonial Pictures -->
 
     <section id="user-reviews-testimonial"
-        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative">
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative border-t border-white/5">
 
         <div
             class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
@@ -1816,7 +1891,15 @@
 
             </div>
 
-            <div class="user-reviews-premium-pagination flex justify-center items-center gap-2 mt-8"></div>
+            <!-- Custom Slide Counter Display Component Integrated Here -->
+            <div class="flex justify-center items-center mt-8">
+                <div
+                    class="bg-zinc-900/60 border border-white/5 backdrop-blur-md px-5 py-2 rounded-full select-none font-mono text-xs md:text-sm font-semibold tracking-widest flex items-center gap-2 text-zinc-500 shadow-xl">
+                    <span id="video-current-slide" class="text-red-500 font-bold">01</span>
+                    <span>/</span>
+                    <span id="video-total-slides" class="text-zinc-400">00</span>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -1964,23 +2047,6 @@
                 right: -25px;
             }
         }
-
-        /* CUSTOM PAGINATION DOTS */
-        .user-reviews-premium-pagination .swiper-pagination-bullet {
-            width: 24px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 9999px;
-            opacity: 1;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .user-reviews-premium-pagination .swiper-pagination-bullet-active {
-            background: #b91c1c !important;
-            width: 48px;
-            box-shadow: 0 0 10px rgba(185, 28, 28, 0.6);
-        }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -2017,19 +2083,42 @@
                         prevEl: '.user-reviews-prev-btn',
                     },
 
-                    pagination: {
-                        el: '.user-reviews-premium-pagination',
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return '<span class="' + className + '"></span>';
-                        },
-                    },
+                    // Progress bullet pagination has been completely removed from here
 
                     keyboard: {
                         enabled: true,
                         onlyInViewport: true,
+                    },
+
+                    on: {
+                        init: function () {
+                            updateCustomCounter(this); // Update counter on load
+                        },
+                        slideChangeTransitionStart: function () {
+                            updateCustomCounter(this); // Update counter instantly when slide movement begins
+                        }
                     }
                 });
+
+                // Dedicated counter update function
+                function updateCustomCounter(swiper) {
+                    const currentEl = document.getElementById('video-current-slide');
+                    const totalEl = document.getElementById('video-total-slides');
+
+                    if (!currentEl || !totalEl) return;
+
+                    // Zero-padding helper (e.g., 5 -> "05")
+                    const pad = (num) => (num < 10 ? `0${num}` : num);
+
+                    // realIndex maps the accurate index ignoring Swiper's duplicate loop clones
+                    const activeIndex = swiper.realIndex + 1;
+
+                    // Calculates the true number of slides by subtracting loop clones safely
+                    const totalSlides = swiper.slides.length - (swiper.loopedSlides ? swiper.loopedSlides * 2 : 0);
+
+                    currentEl.textContent = pad(activeIndex);
+                    totalEl.textContent = pad(totalSlides > 0 ? totalSlides : swiper.slides.length);
+                }
             });
         })();
     </script>
@@ -2097,12 +2186,13 @@
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
 
-    <section id="partners" class="scroll-mt-20 min-h-screen w-full bg-zinc-950 py-16 md:py-24 overflow-hidden">
+    <section id="partners"
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 py-16 md:py-24 overflow-hidden border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
                 Our Partners
             </h2>
-            
+
 
             <div class="carousel-viewport group">
                 <div id="partnerScrollTrack" class="partners-scroll-container gap-8">
@@ -2383,7 +2473,6 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
-
     <!-- Payment Channels Section -->
     <section id="payment" class="scroll-mt-[60px] bg-zinc-950 text-white py-16 md:py-20 border-t border-white/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -2421,22 +2510,30 @@
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
     <!-- Contact Section -->
-    <section id="contact" class="scroll-mt-20 py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" class="scroll-mt-20 py-20 bg-zinc-950 text-white relative overflow-hidden">
+        <!-- Optional Ambient Glow Layer matching your office theme -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-900/5 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-12 tracking-wide">
+                <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-4 tracking-wide">
                     Contact Us
                 </h2>
-                
+                <p class="text-zinc-400 text-sm max-w-md mx-auto">
+                    Have questions? Reach out directly to our visa consultation teams.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Card One: Message Us -->
                 <div
-                    class="bg-black p-8 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center border-t-4 border-red-700">
+                    class="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center border border-zinc-800 border-t-4 border-t-red-700">
                     <h3 class="text-3xl font-bold text-white mb-6">Message Us</h3>
-                    <p class="text-gray-300 mb-8 leading-relaxed">
+                    <p class="text-zinc-300 mb-8 leading-relaxed max-w-md">
                         For inquiries or faster assistance, you may contact us through Messenger or fill out our
-                        <span class="text-red-400 font-semibold">Free Call Assessment Form</span>.
+                        <span class="text-red-500 font-semibold">Free Call Assessment Form</span>.
                         Our visa consultant will reach out within 24 hours.
                     </p>
 
@@ -2455,92 +2552,101 @@
                     </div>
                 </div>
 
-                <div class="bg-black p-8 rounded-2xl shadow-xl border-t-4 border-gray-100 flex flex-col">
-                    <h3 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-4">Contact Information
+                <!-- Card Two: Contact Info -->
+                <div
+                    class="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-zinc-800 border-t-4 border-t-zinc-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-6 border-b border-zinc-800/80 pb-4">Contact Information
                     </h3>
 
+                    <!-- Location Selector Buttons Toggle layout -->
                     <div class="flex space-x-2 mb-8">
                         <button onclick="switchLocation('manila')" id="btn-manila"
                             class="flex-1 py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-wider transition-all bg-red-700 text-white shadow-lg">
                             Head Office (QC)
                         </button>
                         <button onclick="switchLocation('cebu')" id="btn-cebu"
-                            class="flex-1 py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-wider transition-all bg-gray-800 text-gray-400 hover:bg-gray-700">
+                            class="flex-1 py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-wider transition-all bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200">
                             Cebu Branch
                         </button>
                     </div>
 
                     <div class="space-y-6 flex-1">
+                        <!-- Address Info row -->
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-700/20 p-3 rounded-lg mr-4">
+                            <div class="flex-shrink-0 bg-red-700/10 p-3 rounded-lg mr-4 border border-red-900/20">
                                 <i class="fas fa-map-marker-alt text-red-600 text-xl"></i>
                             </div>
                             <div>
-                                <span class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Office
+                                <span
+                                    class="block font-bold text-zinc-400 uppercase text-xs tracking-widest mb-1">Office
                                     Address</span>
-                                <p id="address-text" class="text-gray-300 text-sm leading-relaxed">
-                                    GM Floor, MC Premiere Building, Balintawak, EDSA, <br>
+                                <p id="address-text" class="text-zinc-200 text-sm leading-relaxed">
+                                    GM Floor, MC Premiere Building, Balintawak, EDSA, <br class="hidden sm:inline">
                                     Quezon City, Philippines, 1181
                                 </p>
                             </div>
                         </div>
 
+                        <!-- Phone Info row -->
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-700/20 p-3 rounded-lg mr-4">
+                            <div class="flex-shrink-0 bg-red-700/10 p-3 rounded-lg mr-4 border border-red-900/20">
                                 <i class="fas fa-phone-alt text-red-600 text-xl"></i>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                                 <div>
                                     <span
-                                        class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Phone
+                                        class="block font-bold text-zinc-400 uppercase text-xs tracking-widest mb-1">Phone
                                         Number</span>
-                                    <p class="text-gray-300 text-sm">+63 953 460 0255</p>
+                                    <p class="text-zinc-200 text-sm">+63 953 460 0255</p>
                                 </div>
                                 <div>
                                     <span
-                                        class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Landline</span>
-                                    <p class="text-gray-300 text-sm">(02) 8681 4497</p>
+                                        class="block font-bold text-zinc-400 uppercase text-xs tracking-widest mb-1">Landline</span>
+                                    <p class="text-zinc-200 text-sm">(02) 8681 4497</p>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Email Info row -->
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-700/20 p-3 rounded-lg mr-4">
+                            <div class="flex-shrink-0 bg-red-700/10 p-3 rounded-lg mr-4 border border-red-900/20">
                                 <i class="fas fa-envelope text-red-600 text-xl"></i>
                             </div>
                             <div>
-                                <span class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Email
+                                <span class="block font-bold text-zinc-400 uppercase text-xs tracking-widest mb-1">Email
                                     Address</span>
-                                <p class="text-gray-300 text-sm break-all">bridgewayvisa@gmail.com</p>
+                                <p class="text-zinc-200 text-sm break-all">bridgewayvisa@gmail.com</p>
                             </div>
                         </div>
 
+                        <!-- Hours Info row -->
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-700/20 p-3 rounded-lg mr-4">
+                            <div class="flex-shrink-0 bg-red-700/10 p-3 rounded-lg mr-4 border border-red-900/20">
                                 <i class="fas fa-clock text-red-600 text-xl"></i>
                             </div>
                             <div>
-                                <span class="block font-bold text-white uppercase text-xs tracking-widest mb-1">Office
+                                <span
+                                    class="block font-bold text-zinc-400 uppercase text-xs tracking-widest mb-1">Office
                                     Hours</span>
-                                <p class="text-gray-300 text-sm leading-relaxed">
-                                    <span class="text-white">Mon - Fri:</span> 8:00 AM – 5:00 PM<br />
-                                    <span class="text-white">Sat:</span> 8:00 AM – 12:00 NN
+                                <p class="text-zinc-300 text-sm leading-relaxed">
+                                    <span class="text-white font-medium">Mon - Fri:</span> 8:00 AM – 5:00 PM<br />
+                                    <span class="text-white font-medium">Sat:</span> 8:00 AM – 12:00 NN
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex space-x-6 mt-10 pt-6 border-t border-gray-800">
+                    <!-- Socials Panel wrapper border link styling -->
+                    <div class="flex space-x-6 mt-10 pt-6 border-t border-zinc-800/80">
                         <a id="fb-link"
                             href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
                             target="_blank"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white"
+                            class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white border border-zinc-700/50"
                             aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@bridgewayvisatravelcorp_?_r=1&_t=ZS-963QRuCF1Oi&fbclid=IwY2xjawRsFDdleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeJfK-2ADOoiYyipdikV2gags_4BQ1KqKxH70oR12hR9C4r7DHPQZbYpKjTrw_aem_bEdktLTG_-OKaK-b6WARGw"
-                            target="_blank"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition-colors text-white"
+                        <a href="https://www.tiktok.com/@bridgewayvisatravelcorp_" target="_blank"
+                            class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-red-600 transition-colors text-white border border-zinc-700/50"
                             aria-label="TikTok">
                             <i class="fab fa-tiktok"></i>
                         </a>
@@ -2548,9 +2654,9 @@
                 </div>
             </div>
 
-            <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <iframe id="map-frame"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2033481232814!2d121.00223707590807!3d14.644400475990263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b663b6555555%3A0x6b107e3a24147610!2sMC%20Premiere%20Building!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
+            <!-- Google Map Iframe Border Layout Wrapper -->
+            <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-zinc-900 bg-zinc-900">
+                <iframe id="map-frame" src="https://www.google.com/maps?q=14.65755,121.02107&output=embed&z=16"
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -2567,10 +2673,10 @@
             const fbLink = document.getElementById('fb-link'); // Targeted the FB link element
 
             if (location === 'manila') {
-                mapFrame.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2033481232814!2d121.00223707590807!3d14.644400475990263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b663b6555555%3A0x6b107e3a24147610!2sMC%20Premiere%20Building!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph";
-                addressText.innerHTML = "GM Floor, MC Premiere Building, Balintawak, EDSA, <br> Quezon City, Philippines, 1181";
+                // Exact coordinates for MC Premiere Building, QC + output=embed forces a physical pin
+                mapFrame.src = "https://www.google.com/maps?q=14.65755,121.02107&output=embed&z=16";
 
-                // Set Manila FB Page Link
+                addressText.innerHTML = "GM Floor, MC Premiere Building, Balintawak, EDSA, <br> Quezon City, Philippines, 1181";
                 fbLink.href = "https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/";
 
                 btnManila.classList.replace('bg-gray-800', 'bg-red-700');
@@ -2578,10 +2684,10 @@
                 btnCebu.classList.replace('bg-red-700', 'bg-gray-800');
                 btnCebu.classList.replace('text-white', 'text-gray-400');
             } else {
-                mapFrame.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.132840502288!2d123.9405626757657!3d10.331252667232237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9990022718e27%3A0x2f42a1215b497f9e!2sCopenhagen%20East%20Residences!5e0!3m2!1sen!2sph!4v1715264000000!5m2!1sen!2sph";
-                addressText.innerHTML = "Copenhagen East Residences Building, A.C.Cortes Avenue, <br> Cambaro, Mandaue City, Philippines, 6014";
+                // Exact coordinates for Copenhagen East Residences, Cebu + output=embed forces a physical pin
+                mapFrame.src = "https://www.google.com/maps?q=10.33124,123.94411&output=embed&z=16";
 
-                // Set Cebu FB Page Link
+                addressText.innerHTML = "Copenhagen East Residences Building, A.C.Cortes Avenue, <br> Cambaro, Mandaue City, Philippines, 6014";
                 fbLink.href = "https://www.facebook.com/share/16uLpWc4GJ/?mibextid=wwXIfr";
 
                 btnCebu.classList.replace('bg-gray-800', 'bg-red-700');
@@ -2591,10 +2697,15 @@
             }
         }
     </script>
-    <footer class="bg-gray-900 text-gray-300 py-16">
+
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
+    <footer class="bg-zinc-950 text-zinc-400 py-16 border-t border-zinc-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
+                <!-- Brand Column -->
                 <div class="flex flex-col">
                     <div class="flex items-center mb-6">
                         <img src="logo.ico" alt="BVTC Logo"
@@ -2603,39 +2714,47 @@
                             Bridgeway Visa
                         </span>
                     </div>
-                    <p class="text-sm leading-relaxed mb-6">
+                    <p class="text-sm leading-relaxed mb-6 text-zinc-400">
                         Connecting the world's best talent with exceptional opportunities. Your trusted partner in
                         global mobility and visa consulting.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/people/Bridgeway-Visa-Travel-Corporation/61570211881355/"
                             target="_blank"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white"
+                            class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-blue-600 transition-colors text-white border border-zinc-800"
                             aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="https://www.tiktok.com/@bridgewayvisatravelcorp_?_r=1&_t=ZS-963QRuCF1Oi&fbclid=IwY2xjawRsFDdleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeJfK-2ADOoiYyipdikV2gags_4BQ1KqKxH70oR12hR9C4r7DHPQZbYpKjTrw_aem_bEdktLTG_-OKaK-b6WARGw"
                             target="_blank"
-                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition-colors text-white"
+                            class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-red-600 transition-colors text-white border border-zinc-800"
                             aria-label="TikTok">
                             <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
 
+                <!-- Quick Links -->
                 <div>
                     <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#about" class="hover:text-red-500 transition-colors">About Us</a></li>
-                        <li><a href="#services" class="hover:text-red-500 transition-colors">Our Services</a></li>
-                        <li><a href="#featured-programs" class="hover:text-red-500 transition-colors">Featured
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#about" class="hover:text-red-600 transition-colors">About Us</a></li>
+                        <li><a href="#location" class="hover:text-red-600 transition-colors">Office Location</a></li>
+                        <li><a href="#services" class="hover:text-red-600 transition-colors">Our Services</a></li>
+                        <li><a href="#featured-programs" class="hover:text-red-600 transition-colors">Featured
                                 Programs</a></li>
-                        <li><a href="#partners" class="hover:text-red-500 transition-colors">Global Partners</a></li>
-                        <li><a href="#payment" class="hover:text-red-500 transition-colors">Payment Channels</a></li>
-                        <li><a href="#contact" class="hover:text-red-500 transition-colors">Contact Support</a></li>
+                        <li><a href="#our-foundation" class="hover:text-red-600 transition-colors">Our Foundation</a>
+                        </li>
+                        <li><a href="#organization-chart" class="hover:text-red-600 transition-colors">Organization
+                                Chart</a></li>
+                        <li><a href="#testimonial" class="hover:text-red-600 transition-colors">Testimonials</a></li>
+                        <li><a href="#partners" class="hover:text-red-600 transition-colors">Global Partners</a></li>
+                        <li><a href="#payment" class="hover:text-red-600 transition-colors">Payment Channels</a></li>
+                        <li><a href="#contact" class="hover:text-red-600 transition-colors">Contact Support</a></li>
                     </ul>
                 </div>
 
+                <!-- Visa Services -->
                 <div>
                     <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6">Visa Services</h4>
                     <ul class="space-y-3 text-sm">
@@ -2651,24 +2770,26 @@
                     </ul>
                 </div>
 
+                <!-- Call to Action -->
                 <div>
                     <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6">Ready to Start?</h4>
-                    <p class="text-sm mb-4">Book your free assessment today and take the first step toward your global
-                        future.</p>
+                    <p class="text-sm mb-4 text-zinc-400">Book your free assessment today and take the first step toward
+                        your global future.</p>
                     <a href="#contact"
-                        class="inline-block bg-red-700 text-white px-6 py-2 rounded font-bold text-sm hover:bg-red-800 transition-all shadow-lg">
+                        class="inline-block bg-red-700 text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-red-800 transition-all shadow-lg">
                         Free Assessment
                     </a>
                 </div>
             </div>
 
+            <!-- Bottom Copyright Area -->
             <div
-                class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                class="border-t border-zinc-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500">
                 <p>© 2026 Bridgeway Visa Travel Corporation. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Service</a>
-                    <a href="#" class="hover:text-white">Cookie Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
                 </div>
             </div>
         </div>
