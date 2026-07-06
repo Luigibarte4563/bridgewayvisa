@@ -55,6 +55,8 @@
                     <a href="#organization-chart"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Org
                         Chart</a>
+                    <a href="#team"
+                        class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Team</a>
                     <a href="#testimonial"
                         class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all">Testimonials</a>
                     <a href="#partners"
@@ -80,7 +82,8 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 max-h-[calc(100vh-5rem)] overflow-y-auto">
             <div class="px-4 py-6 space-y-2">
                 <a href="#about"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">About</a>
@@ -97,6 +100,8 @@
                 <a href="#organization-chart"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Org
                     Chart</a>
+                <a href="#team"
+                    class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Team</a>
                 <a href="#testimonial"
                     class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-red-700/20 rounded-xl transition-all">Testimonials</a>
                 <a href="#partners"
@@ -1172,6 +1177,470 @@
         });
     </script>
 
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
+    </div>
+
+    <section id="team"
+        class="scroll-mt-20 min-h-screen w-full bg-zinc-950 text-white overflow-hidden flex flex-col justify-center items-center py-16 relative border-t border-white/5">
+
+        <!-- Ambient Glow Effects -->
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zinc-800/20 rounded-full filter blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10">
+
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-red-700 text-center mb-2 tracking-wide pb-12">
+                Meet Our Dedicated Team
+            </h2>
+
+            <!-- Scrollable Cards Container Grid -->
+            <div class="w-full max-h-[75vh] overflow-y-auto pr-2 custom-scrollbar">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-1">
+
+                    <!-- Card 1 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/ANNE CHRISTINE GO - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp"
+                        data-name="Anne Christine Go">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/ANNE CHRISTINE GO - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp"
+                                alt="Anne Christine Go"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Anne Christine Go</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Accountability</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/BIANCA SANTOLORIN - VISA CONSULTANT (TEAM EXCELLENCE).webp"
+                        data-name="Bianca Santolorin">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/BIANCA SANTOLORIN - VISA CONSULTANT (TEAM EXCELLENCE).webp"
+                                alt="Bianca Santolorin"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Bianca Santolorin</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Excellence</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/DANIELLA TAN - VISA CONSULTANT (TEAM INTEGRITY).webp"
+                        data-name="Daniella Tan">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/DANIELLA TAN - VISA CONSULTANT (TEAM INTEGRITY).webp"
+                                alt="Daniella Tan"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Daniella Tan</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Integrity</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/ERIKA ALFORNON - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp"
+                        data-name="Erika Alfornon">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/ERIKA ALFORNON - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp"
+                                alt="Erika Alfornon"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Erika Alfornon</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Accountability</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/HANNAH ARENZA - VISA SPECIALIST (TEAM ACCOUNTABILITY).webp"
+                        data-name="Hannah Arenza">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/HANNAH ARENZA - VISA SPECIALIST (TEAM ACCOUNTABILITY).webp"
+                                alt="Hannah Arenza"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Hannah Arenza</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Specialist
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Accountability</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/JANNILE BACULI - VISA SPECIALIST (TEAM INTEGRITY).webp"
+                        data-name="Jannile Baculi">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/JANNILE BACULI - VISA SPECIALIST (TEAM INTEGRITY).webp"
+                                alt="Jannile Baculi"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Jannile Baculi</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Specialist
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Integrity</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/JEMIMAH SELIDIO - VISA SPECIALIST (TEAM EXCELLENCE).webp"
+                        data-name="Jemimah Selidio">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/JEMIMAH SELIDIO - VISA SPECIALIST (TEAM EXCELLENCE).webp"
+                                alt="Jemimah Selidio"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Jemimah Selidio</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Specialist
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Excellence</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/JESSICA BRACIA - VISA CONSULTANT (TEAM INTEGRITY).webp"
+                        data-name="Jessica Bracia">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/JESSICA BRACIA - VISA CONSULTANT (TEAM INTEGRITY).webp"
+                                alt="Jessica Bracia"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Jessica Bracia</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Integrity</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/JULIA MARIE VENTAYEN - VISA CONSULTANT (TEAM EXCELLENCE).webp"
+                        data-name="Julia Marie Ventayen">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/JULIA MARIE VENTAYEN - VISA CONSULTANT (TEAM EXCELLENCE).webp"
+                                alt="Julia Marie Ventayen"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Julia Marie Ventayen</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Excellence</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 (CEO) -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/JUSTINE PAUL BAUTISTA - CHIEF EXECUTIVE OFFICER.webp"
+                        data-name="Justine Paul Bautista">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/JUSTINE PAUL BAUTISTA - CHIEF EXECUTIVE OFFICER.webp"
+                                alt="Justine Paul Bautista"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Justine Paul Bautista</h3>
+                            <p class="text-red-500 text-xs mt-1 tracking-wide uppercase font-semibold">Chief Executive
+                                Officer</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/KEITH ANDREW PONCE - VISA CASE OFFICER.webp"
+                        data-name="Keith Andrew Ponce">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/KEITH ANDREW PONCE - VISA CASE OFFICER.webp" alt="Keith Andrew Ponce"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Keith Andrew Ponce</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Case Officer
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/KIERSTINE CLEO BERNALDO - VISA CONSULTANT (TEAM EXCELLENCE).webp"
+                        data-name="Kierstine Cleo Bernaldo">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/KIERSTINE CLEO BERNALDO - VISA CONSULTANT (TEAM EXCELLENCE).webp"
+                                alt="Kierstine Cleo Bernaldo"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Kierstine Cleo Bernaldo</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Excellence</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 13 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/KRISTEL JOY LO - RECRUITMENT SPECIALIST.webp" data-name="Kristel Joy Lo">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/KRISTEL JOY LO - RECRUITMENT SPECIALIST.webp" alt="Kristel Joy Lo"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Kristel Joy Lo</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Recruitment
+                                Specialist</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 14 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/MARJORIE LUMINARIO - ACCOUNTING OFFICER.webp"
+                        data-name="Marjorie Luminario">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/MARJORIE LUMINARIO - ACCOUNTING OFFICER.webp" alt="Marjorie Luminario"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Marjorie Luminario</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Accounting Officer
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 15 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/MELBE MAE NIEZ -  VISA CONSULTANT (TEAM ACCOUNTABILITY).webp"
+                        data-name="Melbe Mae Niez">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/MELBE MAE NIEZ -  VISA CONSULTANT (TEAM ACCOUNTABILITY).webp"
+                                alt="Melbe Mae Niez"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Melbe Mae Niez</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Visa Consultant
+                            </p>
+                            <p class="text-zinc-500 text-[11px] mt-0.5">Team Accountability</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 16 (COO) -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/NEIL ANDREY AGAZA - CHIEF OPERATING OFFICER.webp"
+                        data-name="Neil Andrey Agaza">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/NEIL ANDREY AGAZA - CHIEF OPERATING OFFICER.webp"
+                                alt="Neil Andrey Agaza"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Neil Andrey Agaza</h3>
+                            <p class="text-red-500 text-xs mt-1 tracking-wide uppercase font-semibold">Chief Operating
+                                Officer</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 17 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/NICOLE GARCIA - HR OFFICER.webp" data-name="Nicole Garcia">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/NICOLE GARCIA - HR OFFICER.webp" alt="Nicole Garcia"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Nicole Garcia</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">HR Officer</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 18 -->
+                    <div class="team-card bg-zinc-900/40 border border-zinc-800 hover:border-red-900/60 rounded-2xl p-4 flex flex-col justify-between backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 cursor-pointer group shadow-lg"
+                        data-img="assets/Team/PATRICIA ISABELLE DE ROJAS - MARKETING SPECIALIST.webp"
+                        data-name="Patricia Isabelle De Rojas">
+                        <div
+                            class="w-full aspect-[3/4] bg-zinc-950 rounded-xl overflow-hidden mb-4 border border-zinc-800/50">
+                            <img src="assets/Team/PATRICIA ISABELLE DE ROJAS - MARKETING SPECIALIST.webp"
+                                alt="Patricia Isabelle De Rojas"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy" />
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-white text-base group-hover:text-red-400 transition-colors line-clamp-1">
+                                Patricia Isabelle De Rojas</h3>
+                            <p class="text-zinc-400 text-xs mt-1 tracking-wide uppercase font-medium">Marketing
+                                Specialist</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for handling full photo expansion on click -->
+    <div id="image-lightbox"
+        class="fixed inset-0 bg-zinc-950/90 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-md">
+
+        <div class="relative max-w-md w-full flex flex-col items-center">
+
+            <button id="close-lightbox"
+                class="absolute top-3 right-6 text-zinc-400 hover:text-white text-3xl focus:outline-none z-50 line-height-none">
+                &times;
+            </button>
+
+            <img id="lightbox-img" src="" alt=""
+                class="w-full rounded-2xl max-h-[70vh] object-contain border border-zinc-800 shadow-2xl">
+            <h3 id="lightbox-title" class="text-xl font-bold mt-4 text-white"></h3>
+
+        </div>
+    </div>
+
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(24, 24, 27, 0.3);
+            border-radius: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(63, 63, 70, 0.6);
+            border-radius: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(185, 28, 28, 0.8);
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.team-card');
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const closeBtn = document.getElementById('close-lightbox');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const imgPath = card.getAttribute('data-img');
+                    const nameText = card.getAttribute('data-name');
+
+                    lightboxImg.src = imgPath;
+                    lightboxTitle.textContent = nameText;
+
+                    lightbox.classList.remove('opacity-0', 'pointer-events-none');
+                });
+            });
+
+            const closeLightbox = () => {
+                lightbox.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => { lightboxImg.src = ""; }, 300);
+            };
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+        });
+    </script>
     <div class="max-w-6xl mx-auto px-4">
         <div class="h-px bg-gradient-to-r from-transparent via-red-700/50 to-transparent"></div>
     </div>
@@ -2278,8 +2747,8 @@
                         <div class="flex-grow">
                             <div
                                 class="w-40 h-20 mx-auto mb-4 bg-white rounded-md flex items-center justify-center overflow-hidden">
-                                <img src="assets/ourPartners/canberraCollegeOfManagement&Technology.webp" alt="CCMT Logo"
-                                    class="object-contain w-full h-full" />
+                                <img src="assets/ourPartners/canberraCollegeOfManagement&Technology.webp"
+                                    alt="CCMT Logo" class="object-contain w-full h-full" />
                             </div>
                             <h4 class="text-lg font-bold text-white mb-1">Canberra College (CCMT)</h4>
                             <p class="text-gray-300 text-sm italic mb-2">Business and tech disciplines</p>
