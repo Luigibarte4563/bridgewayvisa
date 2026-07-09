@@ -1,3 +1,4 @@
+import logo from "../../../assets/logo.ico";
 export default function About() {
   return (
     <section
@@ -14,7 +15,7 @@ export default function About() {
             <div className="absolute -inset-1 bg-gradient-to-r from-red-700 to-zinc-800 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000" />
             <div className="relative">
               <img
-                src="/assets/logo.ico"
+                src={logo}
                 alt="Bridgeway Visa Travel Corporation"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition duration-500"
               />

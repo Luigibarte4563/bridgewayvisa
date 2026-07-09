@@ -1,31 +1,38 @@
-import { useState } from 'react'
+import { useState } from "react";
+import logo from "../../../assets/logo.ico";
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#office', label: 'Office' },
-  { href: '#services', label: 'Services' },
-  { href: '#featured-programs', label: 'Featured' },
-  { href: '#our-foundation', label: 'Foundation' },
-  { href: '#organization-chart', label: 'Org Chart' },
-  { href: '#team', label: 'Team' },
-  { href: '#testimonial', label: 'Testimonials' },
-  { href: '#partners', label: 'Partners' },
-  { href: '#payment', label: 'Payment' },
-]
+  { href: "#about", label: "About" },
+  { href: "#office", label: "Office" },
+  { href: "#services", label: "Services" },
+  { href: "#featured-programs", label: "Featured" },
+  { href: "#our-foundation", label: "Foundation" },
+  { href: "#organization-chart", label: "Org Chart" },
+  { href: "#team", label: "Team" },
+  { href: "#testimonial", label: "Testimonials" },
+  { href: "#partners", label: "Partners" },
+  { href: "#payment", label: "Payment" },
+];
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleClick = () => setMobileOpen(false)
+  const handleClick = () => setMobileOpen(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-zinc-900/95 backdrop-blur-md border-b border-red-700/30" id="navbar">
+    <nav
+      className="fixed w-full z-50 bg-zinc-900/95 backdrop-blur-md border-b border-red-700/30"
+      id="navbar"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#about" className="flex items-center gap-3 group cursor-pointer no-underline">
+          <a
+            href="#about"
+            className="flex items-center gap-3 group cursor-pointer no-underline"
+          >
             <div className="relative">
               <img
-                src="/assets/logo.ico"
+                src={logo}
                 alt="BVTC Logo"
                 className="w-11 h-11 rounded-full object-cover border-2 border-red-600 transition-transform group-hover:scale-110"
               />
@@ -65,8 +72,18 @@ export default function Navbar() {
               className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
               aria-label="Toggle menu"
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -97,5 +114,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
