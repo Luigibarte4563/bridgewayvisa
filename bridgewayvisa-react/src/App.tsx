@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import Office from "./components/Office";
+import MainOffice from "./components/MainOffice";
+import CebuOffice from "./components/CebuOffice";
 import OfficeLocation from "./components/OfficeLocation";
 import Services from "./components/Services";
 import FeaturedPrograms from "./components/FeaturedPrograms";
 import Foundation from "./components/Foundation";
-import OrgChart from "./components/OrgChart";
 import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
 import UserReviews from "./components/UserReviews";
@@ -22,7 +22,9 @@ export default function App() {
       <Navbar />
       <About />
       <SectionDivider />
-      <Office />
+      <MainOffice />
+      <SectionDivider />
+      <CebuOffice />
       <SectionDivider />
       <OfficeLocation />
       <SectionDivider />
@@ -31,8 +33,6 @@ export default function App() {
       <FeaturedPrograms />
       <SectionDivider />
       <Foundation />
-      <SectionDivider />
-      <OrgChart />
       <SectionDivider />
       <Team />
       <SectionDivider />

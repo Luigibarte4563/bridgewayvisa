@@ -9,7 +9,6 @@ import patriciaIsabelleDeRojas from "../../../assets/Team/PATRICIA ISABELLE DE R
 
 import keithAndrewPonce from "../../../assets/Team/KEITH ANDREW PONCE - VISA CASE OFFICER.webp";
 
-import anneChristineGo from "../../../assets/Team/ANNE CHRISTINE GO - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp";
 import erikaAlfornon from "../../../assets/Team/ERIKA ALFORNON - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp";
 import melbeMaeNiez from "../../../assets/Team/MELBE MAE NIEZ -  VISA CONSULTANT (TEAM ACCOUNTABILITY).webp";
 import hannahArenza from "../../../assets/Team/HANNAH ARENZA - VISA SPECIALIST (TEAM ACCOUNTABILITY).webp";
@@ -76,12 +75,6 @@ const teamMembers: TeamMember[] = [
   },
 
   // Team Accountability
-  {
-    name: "Anne Christine Go",
-    role: "Visa Consultant",
-    team: "Team Accountability",
-    image: anneChristineGo,
-  },
   {
     name: "Erika Alfornon",
     role: "Visa Consultant",

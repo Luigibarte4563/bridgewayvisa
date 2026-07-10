@@ -233,3 +233,23 @@ npm run deploy
 - Improve accessibility (ARIA labels, keyboard navigation)
 - Add unit and component testing
 - Implement route-based code splitting
+
+## Changes Made
+
+- Renamed `Office.tsx` to `MainOffice.tsx`.
+- Created a new `CebuOffice.tsx` component.
+- Separated the office descriptions into their respective components:
+  - **Main Office** description is now in `MainOffice.tsx`.
+  - **Cebu Office** description is now in `CebuOffice.tsx`.
+
+- Removed the **Organizational Chart** section by deleting `OrgChart.tsx`.
+- Updated one of the images in the **Team** section.
+- Updated the image in the **Payment Channel** section.
+
+### Updated Structure
+
+```text
+components/
+├── MainOffice.tsx
+└── CebuOffice.tsx
+```
