@@ -12,6 +12,7 @@ import keithAndrewPonce from "../../../assets/Team/KEITH ANDREW PONCE - VISA CAS
 import erikaAlfornon from "../../../assets/Team/ERIKA ALFORNON - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp";
 import melbeMaeNiez from "../../../assets/Team/MELBE MAE NIEZ -  VISA CONSULTANT (TEAM ACCOUNTABILITY).webp";
 import hannahArenza from "../../../assets/Team/HANNAH ARENZA - VISA SPECIALIST (TEAM ACCOUNTABILITY).webp";
+import kateYamoway from "../../../assets/Team/KATE YAMOWAY - VISA CONSULTANT (TEAM ACCOUNTABILITY).webp";
 
 import biancaSantolorin from "../../../assets/Team/BIANCA SANTOLORIN - VISA CONSULTANT (TEAM EXCELLENCE).webp";
 import juliaMarieVentayen from "../../../assets/Team/JULIA MARIE VENTAYEN - VISA CONSULTANT (TEAM EXCELLENCE).webp";
@@ -21,6 +22,7 @@ import jemimahSelidio from "../../../assets/Team/JEMIMAH SELIDIO - VISA SPECIALI
 import daniellaTan from "../../../assets/Team/DANIELLA TAN - VISA CONSULTANT (TEAM INTEGRITY).webp";
 import jessicaBracia from "../../../assets/Team/JESSICA BRACIA - VISA CONSULTANT (TEAM INTEGRITY).webp";
 import jannileBaculi from "../../../assets/Team/JANNILE BACULI - VISA SPECIALIST (TEAM INTEGRITY).webp";
+import jasperBalgos from "../../../assets/Team/JASPER BALGOS - VISA CONSULTANT (TEAM INTEGRITY).webp";
 
 interface TeamMember {
   name: string;
@@ -93,6 +95,12 @@ const teamMembers: TeamMember[] = [
     team: "Team Accountability",
     image: hannahArenza,
   },
+  {
+    name: "Kate Yamoway",
+    role: "Visa Consultant",
+    team: "Team Accountability",
+    image: kateYamoway,
+  },
 
   // Team Excellence
   {
@@ -138,6 +146,12 @@ const teamMembers: TeamMember[] = [
     role: "Visa Specialist",
     team: "Team Integrity",
     image: jannileBaculi,
+  },
+  {
+    name: "Jasper Balgos",
+    role: "Visa Consultant",
+    team: "Team Integrity",
+    image: jasperBalgos,
   },
 ];
 

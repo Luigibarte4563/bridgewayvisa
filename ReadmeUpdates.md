@@ -258,3 +258,10 @@ components/
 
 - 📍 Added an **Office Location Guide** with a YouTube video to help users find our office more easily.
 - 🎥 https://www.youtube.com/watch?v=NhSijB4gMGw
+
+## 👥 Update: Team Section
+
+Added two new Visa Consultants to the **Team** section:
+
+- **Jasper Balgos** – Visa Consultant (Team Integrity)
+- **Kate Yamoway** – Visa Consultant (Team Accountability)
