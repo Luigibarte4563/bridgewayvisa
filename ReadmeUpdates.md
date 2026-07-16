@@ -265,3 +265,15 @@ Added two new Visa Consultants to the **Team** section:
 
 - **Jasper Balgos** – Visa Consultant (Team Integrity)
 - **Kate Yamoway** – Visa Consultant (Team Accountability)
+
+## 🏢 Update: Cebu Office Images
+
+Updated the **Cebu Office** section by replacing the previous office images with a new set of branch office photos.
+
+### Replaced Images
+
+- `CEBU OFFICE 2.0.webp` → `CEBU BRANCH OFFICE.webp`
+- `CEBU OFFICE 3.0.webp` → `CEBU BRANCH OFFICE (3).webp`
+- `CEBU OFFICE 4.0.webp` → `CEBU BRANCH OFFICE (2).png`
+
+The updated images provide a more recent and accurate representation of the Cebu Branch Office.

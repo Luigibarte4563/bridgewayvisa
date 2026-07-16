@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
-import cebuOffice2 from "../../../assets/ourOffice/Cebu/CEBU OFFICE 2.0.webp";
-import cebuOffice3 from "../../../assets/ourOffice/Cebu/CEBU OFFICE 3.0.webp";
-import cebuOffice4 from "../../../assets/ourOffice/Cebu/CEBU OFFICE 4.0.webp";
+import cebuBranchOffice from "../../../assets/ourOffice/Cebu/CEBU BRANCH OFFICE.webp";
+import cebuBranchOffice3 from "../../../assets/ourOffice/Cebu/CEBU BRANCH OFFICE (3).webp";
+import cebuBranchOffice2 from "../../../assets/ourOffice/Cebu/CEBU BRANCH OFFICE (2).png";
 
 const slides = [
   {
-    src: cebuOffice4,
-    alt: "Cebu Office Interior",
+    src: cebuBranchOffice,
+    alt: "Cebu Office Front",
   },
   {
-    src: cebuOffice3,
+    src: cebuBranchOffice3,
     alt: "Cebu Office Workspace",
   },
   {
-    src: cebuOffice2,
-    alt: "Cebu Office Front",
+    src: cebuBranchOffice2,
+    alt: "Cebu Office Interior",
   },
 ];
 
