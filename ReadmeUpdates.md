@@ -253,3 +253,8 @@ components/
 ├── MainOffice.tsx
 └── CebuOffice.tsx
 ```
+
+## 🆕 Latest Update
+
+- 📍 Added an **Office Location Guide** with a YouTube video to help users find our office more easily.
+- 🎥 https://www.youtube.com/watch?v=NhSijB4gMGw
