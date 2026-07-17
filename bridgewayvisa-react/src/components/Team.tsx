@@ -90,16 +90,16 @@ const teamMembers: TeamMember[] = [
     image: melbeMaeNiez,
   },
   {
-    name: "Hannah Arenza",
-    role: "Visa Specialist",
-    team: "Team Accountability",
-    image: hannahArenza,
-  },
-  {
     name: "Kate Yamoway",
     role: "Visa Consultant",
     team: "Team Accountability",
     image: kateYamoway,
+  },
+  {
+    name: "Hannah Arenza",
+    role: "Visa Specialist",
+    team: "Team Accountability",
+    image: hannahArenza,
   },
 
   // Team Excellence
