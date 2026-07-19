@@ -277,3 +277,15 @@ Updated the **Cebu Office** section by replacing the previous office images with
 - `CEBU OFFICE 4.0.webp` → `CEBU BRANCH OFFICE (2).png`
 
 The updated images provide a more recent and accurate representation of the Cebu Branch Office.
+
+## 📌 Latest Updates
+
+### 🎯 Featured Programs
+
+- Updated the dimensions of the Featured Program cards for a more consistent and responsive layout.
+- Improved the card presentation to enhance the overall user experience.
+
+### 💬 Testimonials
+
+- Replaced all testimonial photos with the latest images.
+- Updated testimonial visuals to maintain a consistent and modern appearance across the website.

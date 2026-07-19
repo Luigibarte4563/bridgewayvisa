@@ -4,127 +4,122 @@ import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import anicaAguiran from "../../../assets/Testimonials/ANICA AGUIRAN.webp";
-import behaganAdela from "../../../assets/Testimonials/BEHAGAN ADELA.webp";
-import behmanMantilla from "../../../assets/Testimonials/BEHMAN MANTILLA.webp";
-import bernabeMantilla from "../../../assets/Testimonials/BERNABE MANTILLA.webp";
-import carlosAndAguiranFamily from "../../../assets/Testimonials/CARLOS AND AGUIRAN FAMILY.webp";
-import erlindaMantilla from "../../../assets/Testimonials/ERLINDA MANTILLA.webp";
-import gemmilexCarlos from "../../../assets/Testimonials/GEMMILEX CARLOS.webp";
-import hanzenVelarde from "../../../assets/Testimonials/HANZEN VELARDE APPROVED VISIT VISA.webp";
-import jellicaSanJose from "../../../assets/Testimonials/JELLICA SAN JOSE.webp";
-import kaeslyNicole from "../../../assets/Testimonials/KAESLY NICOLE.webp";
-import mantillaFamily from "../../../assets/Testimonials/MANTILLA FAMILY.webp";
-import mrAguiran from "../../../assets/Testimonials/MR. AGUIRAN.webp";
-import msPaguioMarticio from "../../../assets/Testimonials/MS. PAGUIO MARTICIO.webp";
-import normanCordon from "../../../assets/Testimonials/NORMAN CORDON US VISA.webp";
-import ronaldAguiran from "../../../assets/Testimonials/RONALD AGUIRAN.webp";
-import rosieBejer from "../../../assets/Testimonials/ROSIE BEJER US VISA.webp";
-import santiagoFamily1 from "../../../assets/Testimonials/SANTIAGO FAMILY (MR. ALVIN SANTIAGO).webp";
-import santiagoFamily2 from "../../../assets/Testimonials/SANTIAGO FAMILY 2.webp";
-import santiagoFamily3 from "../../../assets/Testimonials/SANTIAGO FAMILY 3.webp";
-import santiagoFamily4 from "../../../assets/Testimonials/SANTIAGO FAMILY4.webp";
+
+import adelaBehagan from "../../../assets/Testimonials/ADELA BEHAGAN - TOURIST VISA.webp";
+import carlosAguiran from "../../../assets/Testimonials/CARLOS-AGUIRAN - VISIT VISA.webp";
+import edralynNieves from "../../../assets/Testimonials/EDRALYN NIEVES - SPAIN VISA APPROVED.webp";
+import hanzenVelarde from "../../../assets/Testimonials/HANZEN VELARDE - VISIT VISA.webp";
+import jelicaSanJose from "../../../assets/Testimonials/JELICA SAN JOSE - TOURIST VISA.webp";
+import jhameica from "../../../assets/Testimonials/JHAMEICA - VISIT VISA.webp";
+import kaeslyNicole from "../../../assets/Testimonials/KAESLY NICOLE - WORKING PERMIT.webp";
+import kristineSuarez from "../../../assets/Testimonials/KRISTINE SUAREZ - BUSINESS VISA.webp";
+import maherAli from "../../../assets/Testimonials/MAHER ALI MOHAMMED BA LABID - PHILIPPINE VISA APPROVED.webp";
+import mantillaFamily from "../../../assets/Testimonials/MANTILLA FAMILY - TOURIST VISA.webp";
+import mariaChristina from "../../../assets/Testimonials/MARIA CHRISTINA BRIONES - TOURIST_VISITOR VISA.webp";
+import merryBiagtan from "../../../assets/Testimonials/MERRY BIAGTAN - TOURIST VISA.webp";
+import mrAguiran from "../../../assets/Testimonials/MR. AGUIRAN -POST GRADUATION WORK PERMIT.webp";
+import mrsOfreneo from "../../../assets/Testimonials/MRS. ROCHEL ANN OFRENEO.webp";
+import normanCordon from "../../../assets/Testimonials/NORMAN CORDON  - US VISA.webp";
+import paguioMarticio from "../../../assets/Testimonials/PAGUIO MARTICIO - POST GRADUATION WORK PERMIT.webp";
+import reynaldoCuadra from "../../../assets/Testimonials/REYNALDO CUADRA - STUDENT VISA.webp";
+import rosieBejer from "../../../assets/Testimonials/ROSIE BEJER - US VISA.webp";
+import santiagoFamily from "../../../assets/Testimonials/SANTIAGO FAMILY - STUDENT VISA + 3 DEPENDENTS TO SPAIN.webp";
 
 const reviews = [
   {
-    image: anicaAguiran,
-    name: "Anica Aguiran",
-    description: "International Journey Success",
+    image: adelaBehagan,
+    name: "Adela Behagan",
+    description: "Tourist Visa Approved",
   },
   {
-    image: behaganAdela,
-    name: "Behagan Adela",
-    description: "Visa Approved Milestone",
+    image: carlosAguiran,
+    name: "Carlos Aguiran",
+    description: "Visit Visa Approved",
   },
   {
-    image: behmanMantilla,
-    name: "Behman Mantilla",
-    description: "Career Advancement Abroad",
-  },
-  {
-    image: bernabeMantilla,
-    name: "Bernabe Mantilla",
-    description: "Residency Pathway Success",
-  },
-  {
-    image: carlosAndAguiranFamily,
-    name: "Carlos & Aguiran Family",
-    description: "Family Relocation Accomplished",
-  },
-  {
-    image: erlindaMantilla,
-    name: "Erlinda Mantilla",
-    description: "Successful Program Transition",
-  },
-  {
-    image: gemmilexCarlos,
-    name: "Gemmilex Carlos",
-    description: "Gained Invaluable Exposure",
+    image: edralynNieves,
+    name: "Edralyn Nieves",
+    description: "Spain Visa Approved",
   },
   {
     image: hanzenVelarde,
     name: "Hanzen Velarde",
-    description: "Approved Visit Visa",
+    description: "Visit Visa Approved",
   },
   {
-    image: jellicaSanJose,
-    name: "Jellica San Jose",
-    description: "Student Experience Success",
+    image: jelicaSanJose,
+    name: "Jelica San Jose",
+    description: "Tourist Visa Approved",
+  },
+  {
+    image: jhameica,
+    name: "Jhameica",
+    description: "Visit Visa Approved",
   },
   {
     image: kaeslyNicole,
     name: "Kaesly Nicole",
-    description: "International Milestone Journey",
+    description: "Work Permit Secured",
+  },
+  {
+    image: kristineSuarez,
+    name: "Kristine Suarez",
+    description: "Business Visa Approved",
+  },
+  {
+    image: maherAli,
+    name: "Maher Ali Mohammed Ba Labid",
+    description: "Philippine Visa Approved",
   },
   {
     image: mantillaFamily,
     name: "Mantilla Family",
-    description: "Secured Long-term Family Status",
+    description: "Tourist Visa Approved",
+  },
+  {
+    image: mariaChristina,
+    name: "Maria Christina Briones",
+    description: "Tourist / Visitor Visa Approved",
+  },
+  {
+    image: merryBiagtan,
+    name: "Merry Biagtan",
+    description: "Tourist Visa Approved",
   },
   {
     image: mrAguiran,
     name: "Mr. Aguiran",
-    description: "Accomplished Global Transition",
+    description: "Post Graduation Work Permit",
   },
   {
-    image: msPaguioMarticio,
-    name: "Ms. Paguio Marticio",
-    description: "Professional Pathway Achieved",
+    image: mrsOfreneo,
+    name: "Mrs. Rochel Ann Ofreneo",
+    description: "Visa Milestone Journey",
   },
   {
     image: normanCordon,
     name: "Norman Cordon",
-    description: "Approved US Visa Success",
+    description: "US Visa Approved",
   },
   {
-    image: ronaldAguiran,
-    name: "Ronald Aguiran",
-    description: "Skills Migration Success Story",
+    image: paguioMarticio,
+    name: "Paguio Marticio",
+    description: "Post Graduation Work Permit",
+  },
+  {
+    image: reynaldoCuadra,
+    name: "Reynaldo Cuadra",
+    description: "Student Visa Approved",
   },
   {
     image: rosieBejer,
     name: "Rosie Bejer",
-    description: "Approved US Visa Accomplished",
+    description: "US Visa Approved",
   },
   {
-    image: santiagoFamily1,
-    name: "Santiago Family (Mr. Alvin)",
-    description: "Relocation & Residency Success",
-  },
-  {
-    image: santiagoFamily2,
-    name: "Santiago Family Part II",
-    description: "Global Career Development",
-  },
-  {
-    image: santiagoFamily3,
-    name: "Santiago Family Part III",
-    description: "New Horizons Secured",
-  },
-  {
-    image: santiagoFamily4,
-    name: "Santiago Family Part IV",
-    description: "Complete Family Relocation Journey",
+    image: santiagoFamily,
+    name: "Santiago Family",
+    description: "Student Visa + 3 Dependents to Spain",
   },
 ];
 

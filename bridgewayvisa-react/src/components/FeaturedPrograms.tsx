@@ -140,12 +140,13 @@ export default function FeaturedPrograms() {
             {tripled.map((program, idx) => (
               <div
                 key={idx}
-                className="relative bg-zinc-900 rounded-2xl overflow-hidden w-[300px] md:w-[420px] h-[380px] md:h-[450px] flex-shrink-0 border border-white/5 group/card transition-all duration-500"
+                /* Capped the desktop sizing using w-full max-w-[290px] md:max-w-[440px] combined with the aspect ratio */
+                className="relative bg-zinc-900 rounded-2xl overflow-hidden w-full max-w-[290px] md:max-w-[440px] aspect-[1080/995] flex-shrink-0 border border-white/5 group/card transition-all duration-500"
               >
                 <img
                   src={program.image}
                   alt={program.title}
-                  className="w-full h-full object-cover transition duration-700 group-hover/card:scale-110"
+                  className="w-full h-full object-cover transition duration-700 group-hover/card:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-5 md:p-8 translate-y-[65%] group-hover/card:translate-y-0 transition-transform duration-500">
                   <h4 className="font-bold text-base md:text-xl text-white mb-2 md:mb-3">
