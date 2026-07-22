@@ -8,15 +8,21 @@ import "swiper/css/effect-coverflow";
 import adelaBehagan from "../../../assets/Testimonials/ADELA BEHAGAN - TOURIST VISA.webp";
 import carlosAguiran from "../../../assets/Testimonials/CARLOS-AGUIRAN - VISIT VISA.webp";
 import edralynNieves from "../../../assets/Testimonials/EDRALYN NIEVES - SPAIN VISA APPROVED.webp";
+import emmanuel from "../../../assets/Testimonials/EMMANUEL - STUDENT-VISA DEPENDENT OF WORKER.webp";
+import ghernessLiwag from "../../../assets/Testimonials/GHERNESS LIWAG - POST GRADUATION WORK PERMIT.webp";
+import graceAnn from "../../../assets/Testimonials/GRACE ANN - PARTNER WORK VISA .webp";
 import hanzenVelarde from "../../../assets/Testimonials/HANZEN VELARDE - VISIT VISA.webp";
 import jelicaSanJose from "../../../assets/Testimonials/JELICA SAN JOSE - TOURIST VISA.webp";
 import jhameica from "../../../assets/Testimonials/JHAMEICA - VISIT VISA.webp";
+import josuaOndog from "../../../assets/Testimonials/JOSUA ONDOG - STUDENT VISA APPROVED.webp";
 import kaeslyNicole from "../../../assets/Testimonials/KAESLY NICOLE - WORKING PERMIT.webp";
 import kristineSuarez from "../../../assets/Testimonials/KRISTINE SUAREZ - BUSINESS VISA.webp";
 import maherAli from "../../../assets/Testimonials/MAHER ALI MOHAMMED BA LABID - PHILIPPINE VISA APPROVED.webp";
 import mantillaFamily from "../../../assets/Testimonials/MANTILLA FAMILY - TOURIST VISA.webp";
 import mariaChristina from "../../../assets/Testimonials/MARIA CHRISTINA BRIONES - TOURIST_VISITOR VISA.webp";
+import marygraceMangupag from "../../../assets/Testimonials/MARYGRACE MANGUPAG - BRIDGING VISA.webp";
 import merryBiagtan from "../../../assets/Testimonials/MERRY BIAGTAN - TOURIST VISA.webp";
+import miguel from "../../../assets/Testimonials/MIGUEL - STUDENT-VISA DEPENDENT OF WORKER.webp";
 import mrAguiran from "../../../assets/Testimonials/MR. AGUIRAN -POST GRADUATION WORK PERMIT.webp";
 import mrsOfreneo from "../../../assets/Testimonials/MRS. ROCHEL ANN OFRENEO.webp";
 import normanCordon from "../../../assets/Testimonials/NORMAN CORDON  - US VISA.webp";
@@ -42,6 +48,21 @@ const reviews = [
     description: "Spain Visa Approved",
   },
   {
+    image: emmanuel,
+    name: "Emmanuel",
+    description: "Student Visa Dependent of Worker",
+  },
+  {
+    image: ghernessLiwag,
+    name: "Gherness Liwag",
+    description: "Post Graduation Work Permit",
+  },
+  {
+    image: graceAnn,
+    name: "Grace Ann",
+    description: "Partner Work Visa",
+  },
+  {
     image: hanzenVelarde,
     name: "Hanzen Velarde",
     description: "Visit Visa Approved",
@@ -55,6 +76,11 @@ const reviews = [
     image: jhameica,
     name: "Jhameica",
     description: "Visit Visa Approved",
+  },
+  {
+    image: josuaOndog,
+    name: "Josua Ondog",
+    description: "Student Visa Approved",
   },
   {
     image: kaeslyNicole,
@@ -82,9 +108,19 @@ const reviews = [
     description: "Tourist / Visitor Visa Approved",
   },
   {
+    image: marygraceMangupag,
+    name: "Marygrace Mangupag",
+    description: "Bridging Visa Approved",
+  },
+  {
     image: merryBiagtan,
     name: "Merry Biagtan",
     description: "Tourist Visa Approved",
+  },
+  {
+    image: miguel,
+    name: "Miguel",
+    description: "Student Visa Dependent of Worker",
   },
   {
     image: mrAguiran,
