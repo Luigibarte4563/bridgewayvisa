@@ -8,7 +8,7 @@ const locations = {
   },
   cebu: {
     address: 'Copenhagen East Residences Building, A.C.Cortes Avenue, Cambaro, Mandaue City, Philippines, 6014',
-    mapSrc: 'https://www.google.com/maps?q=10.33124,123.94411&output=embed&z=16',
+    mapSrc: 'https://www.google.com/maps?q=10.328364,123.951568&output=embed&z=16',
     fbLink: 'https://www.facebook.com/share/16uLpWc4GJ/?mibextid=wwXIfr',
   },
 }
