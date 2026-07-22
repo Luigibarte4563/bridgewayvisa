@@ -289,3 +289,24 @@ The updated images provide a more recent and accurate representation of the Cebu
 
 - Replaced all testimonial photos with the latest images.
 - Updated testimonial visuals to maintain a consistent and modern appearance across the website.
+
+## 📅 Update Log
+
+### ✨ Latest Changes
+
+#### 📍 Contact Section
+
+- Updated the **Cebu Branch** location coordinates to provide a more accurate map location and improve navigation for visitors.
+
+#### 💬 Testimonials Section
+
+- Added new client success testimonial images to showcase recent visa approvals and strengthen the testimonials gallery.
+
+**New testimonial assets:**
+
+- `bridgewayvisa/assets/Testimonials/EMMANUEL - STUDENT-VISA DEPENDENT OF WORKER.webp`
+- `bridgewayvisa/assets/Testimonials/GHERNESS LIWAG - POST GRADUATION WORK PERMIT.webp`
+- `bridgewayvisa/assets/Testimonials/GRACE ANN - PARTNER WORK VISA .webp`
+- `bridgewayvisa/assets/Testimonials/JOSUA ONDOG - STUDENT VISA APPROVED.webp`
+- `bridgewayvisa/assets/Testimonials/MARYGRACE MANGUPAG - BRIDGING VISA.webp`
+- `bridgewayvisa/assets/Testimonials/MIGUEL - STUDENT-VISA DEPENDENT OF WORKER.webp`
